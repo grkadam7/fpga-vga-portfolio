@@ -1,0 +1,125 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#10243c"><meta name="description" content="KLE Technological University ECE mini project portfolio — Problem Definition and Need Identification"><title>Problem Definition and Need Identification · ECE Engineering Portfolio</title><style>
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: Arial, "Segoe UI", sans-serif; font-size:15px;
+         color:#253149; background:#fff; line-height:1.55; }
+  .banner { background:linear-gradient(135deg,#2a1152 0%,#3d1466 55%,#554181 100%);
+            color:#fff; padding:16px 26px; }
+  .banner .eyebrow { font-size:11px; letter-spacing:2px; text-transform:uppercase;
+            opacity:.82; margin:0 0 4px; }
+  .banner .proj { font-family:Georgia,serif; font-size:15px; font-weight:400; margin:0; }
+  .wrap { max-width:980px; margin:0 auto; padding:30px 30px 40px; }
+  .crumb { font-size:11px; letter-spacing:1.5px; text-transform:uppercase;
+            color:#8a8199; margin:0 0 6px; }
+  h1.title { font-family:Georgia,serif; font-size:38px; font-weight:400; color:#291354;
+            letter-spacing:-1px; margin:0 0 6px; line-height:1.1; }
+  .sub { font-size:15px; color:#5a5570; margin:0 0 6px; }
+  .meta { font-size:12px; color:#8a8199; margin:0 0 14px; }
+  .progress { font-size:13px; color:#7a6ba6; margin:0 0 4px; }
+  .record { border:1px solid #e5dff3; border-radius:12px; padding:6px 34px; margin:0 0 22px;
+            box-shadow:0 13px 35px rgba(98,0,79,.08); }
+  .rec-label { font-size:11px; letter-spacing:1.5px; text-transform:uppercase; color:#7a6ba6;
+            padding:22px 0 6px; }
+  .field { padding:20px 0; border-bottom:1px solid #efeaf9; }
+  .field:last-child { border-bottom:none; }
+  .fhead { display:flex; align-items:baseline; gap:14px; margin-bottom:8px; }
+  .fnum { font-family:Georgia,serif; font-size:26px; color:#a99bd0; line-height:1; }
+  .flabel { font-size:16px; font-weight:600; color:#340b67; }
+  .fval { padding-left:40px; }
+  .fval ol, .fval ul { margin:0; padding-left:20px; }
+  .fval li { margin:0 0 4px; }
+  .fval p { margin:0 0 8px; }
+  .fval b, .fval strong { color:#291354; }
+  .fval table { border-collapse:collapse; width:100%; margin:6px 0 4px; font-size:13.5px; }
+  .fval th, .fval td { border:1px solid #e5dff3; padding:7px 11px; text-align:left; vertical-align:top; }
+  .fval th { background:#f6f3fc; font-weight:600; color:#340b67; }
+  .fval tr:nth-child(even) td { background:#fbfaff; }
+  .pending { color:#9a5b00; background:#fff7e6; border:1px dashed #e6c98a; border-radius:5px;
+            padding:0 6px; font-size:13px; }
+  .evidence { font-size:14px; color:#6b6480; padding:18px 0 22px; }
+  .footer { max-width:980px; margin:0 auto; padding:0 30px 30px; font-size:12px; color:#8a8199; }
+</style><link rel="stylesheet" href="styles.css"></head><body><a class="skip" href="#main">Skip to content</a><header class="topbar"><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open portfolio navigation">☰</button><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">KLE</span><span><span class="brand-name">KLE Technological University</span><span class="brand-campus">B. V. Bhoomaraddi Campus, Hubballi</span></span></a><span class="bar-divider"></span><div class="bar-meta"><div class="bar-context">Engineering portfolio</div><div class="bar-year">Foundation Integration · 2026–27</div></div><div class="bar-actions"><span class="bar-pill">● Public view</span><button class="print-button" type="button" onclick="window.print()" aria-label="Print current page">⎙</button></div></header><div class="mobile-backdrop" aria-hidden="true"></div><div class="app-shell"><aside class="sidebar" id="site-nav"><div class="project-code">T01 / A01</div><h2 class="project-title">FPGA-controlled<br>Variable Gain Amplifier</h2><p class="project-tags">Analog × Digital × Evidence</p><div class="nav-heading">Project portfolio / 16-step record</div><nav class="nav-list" aria-label="Portfolio pages"><a class="nav-link" href="index.html"><span class="nav-index">⌂</span><span>Project Overview</span></a><a class="nav-link" href="01-team-and-roles.html"><span class="nav-index">01</span><span>Team and roles</span></a><a class="nav-link" href="02-problem-and-need.html" aria-current="page"><span class="nav-index">02</span><span>Problem Definition and Need Identification</span></a><a class="nav-link" href="03-concept-choices.html"><span class="nav-index">03</span><span>Concept Choices</span></a><a class="nav-link" href="04-functional-requirements.html"><span class="nav-index">04</span><span>Functional Requirements</span></a><a class="nav-link" href="05-architecture-and-subsystems.html"><span class="nav-index">05</span><span>System Architecture</span></a><a class="nav-link" href="06-design-and-calculations.html"><span class="nav-index">06</span><span>Design and Calculations</span></a><a class="nav-link" href="07-foundation-integration-map.html"><span class="nav-index">07</span><span>Foundation Integration Map</span></a><a class="nav-link" href="08-build-and-verification.html"><span class="nav-index">08</span><span>Build and Verification</span></a><a class="nav-link" href="09-predicted-vs-measured.html"><span class="nav-index">09</span><span>Predicted vs Measured</span></a><a class="nav-link" href="10-failures-and-fixes.html"><span class="nav-index">10</span><span>Failures and Fixes</span></a><a class="nav-link" href="11-engineering-notebook.html"><span class="nav-index">11</span><span>Engineering Notebook</span></a><a class="nav-link" href="12-review-record.html"><span class="nav-index">12</span><span>Review Record</span></a><a class="nav-link" href="13-reflections-and-forward-links.html"><span class="nav-index">13</span><span>Reflections and Forward Links</span></a><a class="nav-link" href="14-final-demonstration.html"><span class="nav-index">14</span><span>Final Demonstration</span></a><a class="nav-link" href="15-project-files.html"><span class="nav-index">15</span><span>Project Files and References</span></a></nav></aside><main class="main-area" id="main"><p class="crumb">Theme 1 <span>›</span> Programmable Analog Gain Systems <span>›</span> Problem Definition and Need Identification</p><header class="hero"><p class="eyebrow">PORTFOLIO PAGE 02 · FOUNDATION INTEGRATION</p><h1>Problem Definition and Need Identification</h1><p class="subtitle">Document the need before any circuit is named. Gate 0 — Problem Approval</p><div class="hero-chips"><span class="hero-chip">Page 02 of 15</span><span class="hero-chip">7 content blocks</span><span class="hero-chip">Source-linked design</span></div></header><div class="legacy-content"><p class="meta">Page 2 &middot; due Review 1 &middot; source worksheets WS1 (Week 1), WS2 (Week 2) &middot; last updated 2026-10-26</p>
+  
+
+  <div class="record">
+    <p class="rec-label">Documented engineering record</p>
+
+    <div class="field">
+      <div class="fhead"><span class="fnum">01</span><span class="flabel">The need we identified</span></div>
+      <div class="fval"><p>Load-cell measurement over a wide load range needs the conditioned signal to
+        stay at a useful level for the ADC at every load. A fixed-gain amplifier cannot do this: small
+        signals use only a small part of the ADC range and lose resolution, while large signals saturate
+        the amplifier or the ADC and distort. What is required is amplification that changes with the
+        measured signal, controlled digitally &mdash; stated as a need, before any circuit is named.</p></div>
+    </div>
+
+    <div class="field">
+      <div class="fhead"><span class="fnum">02</span><span class="flabel">Quantified design inputs</span></div>
+      <div class="fval">
+        <table>
+          <tr><th>Input</th><th>Value</th><th>Units / range</th><th>Source</th></tr>
+          <tr><td>Load range</td><td>0 to 5</td><td>kg</td><td>Datasheet &mdash; 5 kg 4-wire strain-gauge load cell</td></tr>
+          <tr><td>Sensor output</td><td>0 to 5</td><td>mV</td><td>Datasheet / measured during load-cell characterisation</td></tr>
+          <tr><td>Pre-amplifier output (INA126)</td><td>&asymp;48 to &asymp;760</td><td>mV</td><td>Calculated from the pre-amp gain &mdash; <span class="pending">[ PENDING: gain calculation card on page 6 ]</span></td></tr>
+          <tr><td>Target output swing</td><td>up to 1 (within XADC input range)</td><td>V</td><td>Design target &mdash; Arty A7 XADC single-ended input, 0&ndash;3.3 V</td></tr>
+          <tr><td>ADC</td><td>12-bit, 0&ndash;3.3</td><td>bit, V</td><td>Datasheet &mdash; Artix-7 XADC user guide</td></tr>
+          <tr><td>Signal bandwidth</td><td>DC or slowly varying</td><td>Hz</td><td>Application &mdash; conveyor-belt weight measurement</td></tr>
+          <tr><td>Supplies</td><td>5 and 3.3</td><td>V</td><td>Assumed &mdash; bench supply and Arty A7 rail</td></tr>
+          <tr><td>Load on output</td><td><span class="pending">[ PENDING &mdash; state R_load and C_load ]</span></td><td>&mdash;</td><td>&mdash;</td></tr>
+          <tr><td>Source impedance</td><td><span class="pending">[ PENDING &mdash; WS1 &middot; B.3, cite the source ]</span></td><td>&Omega;</td><td>&mdash;</td></tr>
+        </table></div>
+    </div>
+
+    <div class="field">
+      <div class="fhead"><span class="fnum">03</span><span class="flabel">Intended application and motivation</span></div>
+      <div class="fval"><p>Load-cell signal conditioning for a measurement and control system &mdash; for
+        example a DC-motor-driven conveyor belt &mdash; where the FPGA both acquires the weight reading
+        and drives an actuator from it.</p></div>
+    </div>
+
+    <div class="field">
+      <div class="fhead"><span class="fnum">04</span><span class="flabel">Background study</span></div>
+      <div class="fval">
+        <table>
+          <tr><th>Source</th><th>What we learned from it</th></tr>
+          <tr><td>Artix-7 XADC user guide</td><td>On-chip 12-bit ADC, input range 0&ndash;3.3 V, suitable for sensor signal acquisition.</td></tr>
+          <tr><td>CD4052 datasheet</td><td>Dual 4-channel analog multiplexer; selection of multiple feedback resistors to obtain different gain levels, controlled by digital select lines.</td></tr>
+          <tr><td>INA126 datasheet</td><td>High input impedance, high CMRR &mdash; suited to bridge sensors such as load cells.</td></tr>
+          <tr><td>Op-amp application notes</td><td>An op-amp VGA with switched feedback resistors is simple, reliable and widely used for sensor signal conditioning.</td></tr>
+        </table>
+        <p><span class="pending">[ PENDING &mdash; add datasheet / application-note links with one line of learning each, per WS1 &middot; Section A ]</span></p></div>
+    </div>
+
+    <div class="field">
+      <div class="fhead"><span class="fnum">05</span><span class="flabel">Three candidate functional requirements</span></div>
+      <div class="fval">
+        <table>
+          <tr><th>#</th><th>Candidate requirement</th><th>Quantified target</th><th>Selected?</th></tr>
+          <tr><td>FR1</td><td>Hold a useful signal level for accurate XADC measurement across the full 0&ndash;5 kg load range.</td><td>VGA output inside the XADC input range, target swing up to 1 V</td><td>Yes &mdash; see page 4</td></tr>
+          <tr><td>FR2</td><td>Provide digitally selectable gain so small and large signals both fit the ADC range.</td><td>4 gain levels: &times;2, &times;3.2, &times;5.7, &times;11 selected by S1 S0</td><td>Yes &mdash; see page 4</td></tr>
+          <tr><td>FR3</td><td>Keep gain within tolerance of the calculated value at every code.</td><td>&plusmn;5 % of theoretical gain</td><td>Yes &mdash; see page 4</td></tr>
+        </table></div>
+    </div>
+
+    <div class="field">
+      <div class="fhead"><span class="fnum">06</span><span class="flabel">Why change is needed &mdash; limitations of fixed-gain amplifiers</span></div>
+      <div class="fval">
+        <table>
+          <tr><th>Limitation</th><th>Effect</th></tr>
+          <tr><td>No automatic adjustment</td><td>Cannot adapt to changing input amplitudes &rarr; inaccurate measurement</td></tr>
+          <tr><td>Gain too high</td><td>Large signals saturate the amplifier or ADC &rarr; distortion</td></tr>
+          <tr><td>Gain too low</td><td>Small signals use only a small portion of the ADC range &rarr; reduced resolution</td></tr>
+        </table></div>
+    </div>
+
+    <div class="field">
+      <div class="fhead"><span class="fnum">07</span><span class="flabel">Design unknowns carried forward to Worksheet 2</span></div>
+      <div class="fval"><ul>
+        <li>Exact minimum/maximum input amplitude at the VGA input once the pre-amp gain is fixed.</li>
+        <li>Number and spacing of gain steps needed to cover the input range without gaps.</li>
+        <li>Number of control bits, logic level and interface type for the FPGA &rarr; switch path.</li>
+        <li><span class="pending">[ PENDING &mdash; WS1 &middot; Section C, "what is still uncertain" answer ]</span></li>
+      </ul></div>
+    </div>
+
+    <p class="evidence">Supporting evidence &mdash; load-cell characterisation data and photos to be linked here. <span class="pending">[ PENDING ]</span></p>
+  </div></div><nav class="page-nav" aria-label="Page navigation"><a href="01-team-and-roles.html">← Previous</a><a href="03-concept-choices.html">Next: Concept Choices →</a></nav><footer class="site-footer">KLE Technological University · Electronics and Communication Engineering<br>FPGA-Controlled Variable Gain Amplifier · Team 01 · Academic Year 2026–27</footer></main></div><script src="site.js" defer></script></body></html>

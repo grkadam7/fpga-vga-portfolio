@@ -1,0 +1,145 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#10243c"><meta name="description" content="KLE Technological University ECE mini project portfolio — Engineering Notebook"><title>Engineering Notebook · ECE Engineering Portfolio</title><style>
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: Arial, "Segoe UI", sans-serif; font-size:15px;
+         color:#253149; background:#fff; line-height:1.55; }
+  .banner { background:linear-gradient(135deg,#2a1152 0%,#3d1466 55%,#554181 100%);
+            color:#fff; padding:16px 26px; }
+  .banner .eyebrow { font-size:11px; letter-spacing:2px; text-transform:uppercase;
+            opacity:.82; margin:0 0 4px; }
+  .banner .proj { font-family:Georgia,serif; font-size:15px; font-weight:400; margin:0; }
+  .wrap { max-width:980px; margin:0 auto; padding:30px 30px 40px; }
+  .crumb { font-size:11px; letter-spacing:1.5px; text-transform:uppercase;
+            color:#8a8199; margin:0 0 6px; }
+  h1.title { font-family:Georgia,serif; font-size:38px; font-weight:400; color:#291354;
+            letter-spacing:-1px; margin:0 0 6px; line-height:1.1; }
+  .sub { font-size:15px; color:#5a5570; margin:0 0 6px; }
+  .meta { font-size:12px; color:#8a8199; margin:0 0 14px; }
+  .progress { font-size:13px; color:#7a6ba6; margin:0 0 4px; }
+  .record { border:1px solid #e5dff3; border-radius:12px; padding:6px 34px; margin:0 0 22px;
+            box-shadow:0 13px 35px rgba(98,0,79,.08); }
+  .rec-label { font-size:11px; letter-spacing:1.5px; text-transform:uppercase; color:#7a6ba6;
+            padding:22px 0 6px; }
+  .field { padding:20px 0; border-bottom:1px solid #efeaf9; }
+  .field:last-child { border-bottom:none; }
+  .fhead { display:flex; align-items:baseline; gap:14px; margin-bottom:8px; }
+  .fnum { font-family:Georgia,serif; font-size:26px; color:#a99bd0; line-height:1; }
+  .flabel { font-size:16px; font-weight:600; color:#340b67; }
+  .fval { padding-left:40px; }
+  .fval ol, .fval ul { margin:0; padding-left:20px; }
+  .fval li { margin:0 0 4px; }
+  .fval p { margin:0 0 8px; }
+  .fval b, .fval strong { color:#291354; }
+  .fval table { border-collapse:collapse; width:100%; margin:6px 0 4px; font-size:13.5px; }
+  .fval th, .fval td { border:1px solid #e5dff3; padding:7px 11px; text-align:left; vertical-align:top; }
+  .fval th { background:#f6f3fc; font-weight:600; color:#340b67; }
+  .fval tr:nth-child(even) td { background:#fbfaff; }
+  .fval sub, .fval sup { font-size:10.5px; }
+  .note { font-size:13px; color:#5a5570; background:#f8f6fd; border-left:3px solid #cfc4e8;
+            padding:8px 14px; margin:8px 0 0; }
+  .pending { color:#9a5b00; background:#fff7e6; border:1px dashed #e6c98a; border-radius:5px;
+            padding:0 6px; font-size:13px; }
+  .evidence { font-size:14px; color:#6b6480; padding:18px 0 22px; }
+  .footer { max-width:980px; margin:0 auto; padding:0 30px 30px; font-size:12px; color:#8a8199; }
+</style><link rel="stylesheet" href="styles.css"></head><body><a class="skip" href="#main">Skip to content</a><header class="topbar"><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open portfolio navigation">☰</button><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">KLE</span><span><span class="brand-name">KLE Technological University</span><span class="brand-campus">B. V. Bhoomaraddi Campus, Hubballi</span></span></a><span class="bar-divider"></span><div class="bar-meta"><div class="bar-context">Engineering portfolio</div><div class="bar-year">Foundation Integration · 2026–27</div></div><div class="bar-actions"><span class="bar-pill">● Public view</span><button class="print-button" type="button" onclick="window.print()" aria-label="Print current page">⎙</button></div></header><div class="mobile-backdrop" aria-hidden="true"></div><div class="app-shell"><aside class="sidebar" id="site-nav"><div class="project-code">T01 / A01</div><h2 class="project-title">FPGA-controlled<br>Variable Gain Amplifier</h2><p class="project-tags">Analog × Digital × Evidence</p><div class="nav-heading">Project portfolio / 16-step record</div><nav class="nav-list" aria-label="Portfolio pages"><a class="nav-link" href="index.html"><span class="nav-index">⌂</span><span>Project Overview</span></a><a class="nav-link" href="01-team-and-roles.html"><span class="nav-index">01</span><span>Team and roles</span></a><a class="nav-link" href="02-problem-and-need.html"><span class="nav-index">02</span><span>Problem Definition and Need Identification</span></a><a class="nav-link" href="03-concept-choices.html"><span class="nav-index">03</span><span>Concept Choices</span></a><a class="nav-link" href="04-functional-requirements.html"><span class="nav-index">04</span><span>Functional Requirements</span></a><a class="nav-link" href="05-architecture-and-subsystems.html"><span class="nav-index">05</span><span>System Architecture</span></a><a class="nav-link" href="06-design-and-calculations.html"><span class="nav-index">06</span><span>Design and Calculations</span></a><a class="nav-link" href="07-foundation-integration-map.html"><span class="nav-index">07</span><span>Foundation Integration Map</span></a><a class="nav-link" href="08-build-and-verification.html"><span class="nav-index">08</span><span>Build and Verification</span></a><a class="nav-link" href="09-predicted-vs-measured.html"><span class="nav-index">09</span><span>Predicted vs Measured</span></a><a class="nav-link" href="10-failures-and-fixes.html"><span class="nav-index">10</span><span>Failures and Fixes</span></a><a class="nav-link" href="11-engineering-notebook.html" aria-current="page"><span class="nav-index">11</span><span>Engineering Notebook</span></a><a class="nav-link" href="12-review-record.html"><span class="nav-index">12</span><span>Review Record</span></a><a class="nav-link" href="13-reflections-and-forward-links.html"><span class="nav-index">13</span><span>Reflections and Forward Links</span></a><a class="nav-link" href="14-final-demonstration.html"><span class="nav-index">14</span><span>Final Demonstration</span></a><a class="nav-link" href="15-project-files.html"><span class="nav-index">15</span><span>Project Files and References</span></a></nav></aside><main class="main-area" id="main"><p class="crumb">Theme 1 <span>›</span> Programmable Analog Gain Systems <span>›</span> Engineering Notebook</p><header class="hero"><p class="eyebrow">PORTFOLIO PAGE 11 · FOUNDATION INTEGRATION</p><h1>Engineering Notebook</h1><p class="subtitle">Each entry: date → objective → decision or calculation → course used → learning → next action. Predictions and calculations are posted before the matching measurement.</p><div class="hero-chips"><span class="hero-chip">Page 11 of 15</span><span class="hero-chip">8 content blocks</span><span class="hero-chip">Source-linked design</span></div></header><div class="legacy-content"><p class="meta">Page 11 &middot; due at least one dated entry every week, closed on Friday &middot; feeds all worksheets &middot; last updated 2026-10-26</p>
+  
+
+  <div class="record">
+    <p class="rec-label">Documented engineering record</p>
+
+    <div class="field">
+      <div class="fhead"><span class="fnum">01</span><span class="flabel">Entry &mdash; 2026-10-26 &middot; Portfolio setup</span></div>
+      <div class="fval">
+        <table>
+          <tr><th>Field</th><th>Entry</th></tr>
+          <tr><td>Objective</td><td>Create the portfolio site and map the nine weekly worksheets onto pages 2&ndash;15.</td></tr>
+          <tr><td>Decision / calculation</td><td>Structure follows the guide: Home + 15 pages; each worksheet feeds its mapped pages (guide mapping table).</td></tr>
+          <tr><td>Course used</td><td>&mdash; (process entry)</td></tr>
+          <tr><td>Learning</td><td>The portfolio is a dated story of decisions, not a file dump: predictions must carry a date earlier than the measurement they are judged against.</td></tr>
+          <tr><td>Next action</td><td>Fill in the FR table (page 4) and freeze it before Review 3; date every calculation card on page 6.</td></tr>
+        </table></div>
+    </div>
+
+    <div class="field">
+      <div class="fhead"><span class="fnum">02</span><span class="flabel">Entry &mdash; Week 1 &middot; Load-cell testing and characterisation <span class="pending">[ DATE &mdash; replace with the real day ]</span></span></div>
+      <div class="fval">
+        <table>
+          <tr><th>Field</th><th>Entry</th></tr>
+          <tr><td>Objective</td><td>Characterise the 5 kg 4-wire strain-gauge load cell: output range over 0&ndash;5 kg, and what the signal chain downstream must handle.</td></tr>
+          <tr><td>Decision / calculation</td><td>Sensor output taken as 0&ndash;5 mV over 0&ndash;5 kg; this sets the pre-amp input range.</td></tr>
+          <tr><td>Course used</td><td>Linear Integrated Circuits &mdash; bridge sensors and instrumentation amplifiers.</td></tr>
+          <tr><td>Learning</td><td><span class="pending">[ PENDING &mdash; what the measurement showed that the datasheet did not ]</span></td></tr>
+          <tr><td>Next action</td><td>Set the pre-amp gain; derive the VGA input range for Worksheet 2.</td></tr>
+        </table></div>
+    </div>
+
+    <div class="field">
+      <div class="fhead"><span class="fnum">03</span><span class="flabel">Entry &mdash; Week 2 &middot; Gain range, loading and control requirements <span class="pending">[ DATE &mdash; replace with the real day ]</span></span></div>
+      <div class="fval">
+        <table>
+          <tr><th>Field</th><th>Entry</th></tr>
+          <tr><td>Objective</td><td>Derive the required gain range and the digital control interface from the input characterization.</td></tr>
+          <tr><td>Decision / calculation</td><td>Four gain levels &times;2, &times;3.2, &times;5.7, &times;11; control bits = ceil(log<sub>2</sub>4) = 2 &rarr; S1 S0; dynamic range of the VGA input &asymp;24 dB.</td></tr>
+          <tr><td>Course used</td><td>Analog Electronic Circuits &mdash; closed-loop gain; Signals &amp; Systems &mdash; dynamic range.</td></tr>
+          <tr><td>Learning</td><td><span class="pending">[ PENDING ]</span></td></tr>
+          <tr><td>Next action</td><td>Compare candidate op-amps (Worksheet 3).</td></tr>
+        </table></div>
+    </div>
+
+    <div class="field">
+      <div class="fhead"><span class="fnum">04</span><span class="flabel">Entry &mdash; Week 3 &middot; Op-amp and configuration selection <span class="pending">[ DATE &mdash; replace with the real day ]</span></span></div>
+      <div class="fval">
+        <table>
+          <tr><th>Field</th><th>Entry</th></tr>
+          <tr><td>Objective</td><td>Select the gain-stage op-amp and configuration from comparisons, and compute R<sub>F</sub> for each gain.</td></tr>
+          <tr><td>Decision / calculation</td><td>Non-inverting stage, A<sub>v</sub> = 1 + R<sub>F</sub>/R<sub>in</sub>, R<sub>in</sub> = 1 k&Omega;, R<sub>F</sub> = 1 k / 2.2 k / 4.7 k / 10 k&Omega;; op-amp: NE5532.</td></tr>
+          <tr><td>Course used</td><td>Analog Electronic Circuits; Linear Integrated Circuits (GBW, slew rate).</td></tr>
+          <tr><td>Learning</td><td><span class="pending">[ PENDING ]</span></td></tr>
+          <tr><td>Next action</td><td>Gain-accuracy and tolerance budget (Worksheet 4).</td></tr>
+        </table></div>
+    </div>
+
+    <div class="field">
+      <div class="fhead"><span class="fnum">05</span><span class="flabel">Entry &mdash; Week 4&ndash;5 &middot; Simulation of the complete circuit <span class="pending">[ DATE &mdash; replace with the real day ]</span></span></div>
+      <div class="fval">
+        <table>
+          <tr><th>Field</th><th>Entry</th></tr>
+          <tr><td>Objective</td><td>Verify the four gain settings and the clipping behaviour before building.</td></tr>
+          <tr><td>Decision / calculation</td><td>LTspice model: load cell &rarr; INA126 &rarr; NE5532 VGA with CD4052-switched R<sub>F</sub> &rarr; 3.3 V ADC limit; input 10 mV<sub>pp</sub>; supply &plusmn;5 V.</td></tr>
+          <tr><td>Course used</td><td>Analog Electronic Circuits (feedback, clipping); Digital System Design (code-to-channel mapping).</td></tr>
+          <tr><td>Learning</td><td>Simulated gains 1.9 / 3.1 / 5.6 / 10.8 vs theory 2.0 / 3.2 / 5.7 / 11.0 &mdash; every code reads low by 1.8&ndash;5 %; a systematic offset, not a per-setting error.</td></tr>
+          <tr><td>Next action</td><td>Bench-measure the same four codes and compare with simulation (Worksheet 6).</td></tr>
+        </table></div>
+    </div>
+
+    <div class="field">
+      <div class="fhead"><span class="fnum">06</span><span class="flabel">Entry &mdash; Week 6 &middot; VGA + CD4052 integration <span class="pending">[ DATE &mdash; replace with the real day ]</span></span></div>
+      <div class="fval">
+        <table>
+          <tr><th>Field</th><th>Entry</th></tr>
+          <tr><td>Objective</td><td>Connect the analog gain stage to the multiplexer and confirm the right code gives the right gain.</td></tr>
+          <tr><td>Decision / calculation</td><td>Integration completed on breadboard; FPGA gain-selection logic (S0/S1) in development.</td></tr>
+          <tr><td>Course used</td><td>Digital System Design &mdash; safe code transitions; Analog Electronic Circuits &mdash; feedback network switching.</td></tr>
+          <tr><td>Learning</td><td><span class="pending">[ PENDING ]</span></td></tr>
+          <tr><td>Next action</td><td>XADC interfacing and reading; actuator integration.</td></tr>
+        </table></div>
+    </div>
+
+    <div class="field">
+      <div class="fhead"><span class="fnum">07</span><span class="flabel">Remaining weekly entries</span></div>
+      <div class="fval">
+        <table>
+          <tr><th>Week</th><th>Objective (planned)</th><th>Entry status</th></tr>
+          <tr><td>Week 7</td><td>Full-system validation: input-range coverage, gain-selection rule, signal fidelity</td><td><span class="pending">[ PENDING ]</span></td></tr>
+          <tr><td>Week 8</td><td>Implementation package and robustness testing (BOM, RTL, constraints, supply/thermal stress)</td><td><span class="pending">[ PENDING ]</span></td></tr>
+          <tr><td>Week 9</td><td>Final design review: specification sheet, decision trace, reflections</td><td><span class="pending">[ PENDING ]</span></td></tr>
+        </table></div>
+    </div>
+
+    <div class="field">
+      <div class="fhead"><span class="fnum">08</span><span class="flabel">Housekeeping</span></div>
+      <div class="fval"><p class="note"><i>Add a Friday entry every week, dated that Friday, closing with what was learned and
+        verified, then update the Home page progress strip.</i></p></div>
+    </div>
+
+    <p class="evidence">Supporting evidence &mdash; each weekly entry links the worksheet section it closed out. <span class="pending">[ PENDING ]</span></p>
+  </div></div><nav class="page-nav" aria-label="Page navigation"><a href="10-failures-and-fixes.html">← Previous</a><a href="12-review-record.html">Next: Review Record →</a></nav><footer class="site-footer">KLE Technological University · Electronics and Communication Engineering<br>FPGA-Controlled Variable Gain Amplifier · Team 01 · Academic Year 2026–27</footer></main></div><script src="site.js" defer></script></body></html>

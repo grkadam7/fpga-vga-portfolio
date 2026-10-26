@@ -1,0 +1,153 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#10243c"><meta name="description" content="KLE Technological University ECE mini project portfolio — Design and Calculations"><title>Design and Calculations · ECE Engineering Portfolio</title><style>
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: Arial, "Segoe UI", sans-serif; font-size:15px;
+         color:#253149; background:#fff; line-height:1.55; }
+  .banner { background:linear-gradient(135deg,#2a1152 0%,#3d1466 55%,#554181 100%);
+            color:#fff; padding:16px 26px; }
+  .banner .eyebrow { font-size:11px; letter-spacing:2px; text-transform:uppercase;
+            opacity:.82; margin:0 0 4px; }
+  .banner .proj { font-family:Georgia,serif; font-size:15px; font-weight:400; margin:0; }
+  .wrap { max-width:980px; margin:0 auto; padding:30px 30px 40px; }
+  .crumb { font-size:11px; letter-spacing:1.5px; text-transform:uppercase;
+            color:#8a8199; margin:0 0 6px; }
+  h1.title { font-family:Georgia,serif; font-size:38px; font-weight:400; color:#291354;
+            letter-spacing:-1px; margin:0 0 6px; line-height:1.1; }
+  .sub { font-size:15px; color:#5a5570; margin:0 0 6px; }
+  .meta { font-size:12px; color:#8a8199; margin:0 0 14px; }
+  .progress { font-size:13px; color:#7a6ba6; margin:0 0 4px; }
+  .record { border:1px solid #e5dff3; border-radius:12px; padding:6px 34px; margin:0 0 22px;
+            box-shadow:0 13px 35px rgba(98,0,79,.08); }
+  .rec-label { font-size:11px; letter-spacing:1.5px; text-transform:uppercase; color:#7a6ba6;
+            padding:22px 0 6px; }
+  .field { padding:20px 0; border-bottom:1px solid #efeaf9; }
+  .field:last-child { border-bottom:none; }
+  .fhead { display:flex; align-items:baseline; gap:14px; margin-bottom:8px; }
+  .fnum { font-family:Georgia,serif; font-size:26px; color:#a99bd0; line-height:1; }
+  .flabel { font-size:16px; font-weight:600; color:#340b67; }
+  .fval { padding-left:40px; }
+  .fval ol, .fval ul { margin:0; padding-left:20px; }
+  .fval li { margin:0 0 4px; }
+  .fval p { margin:0 0 8px; }
+  .fval b, .fval strong { color:#291354; }
+  .fval table { border-collapse:collapse; width:100%; margin:6px 0 4px; font-size:13.5px; }
+  .fval th, .fval td { border:1px solid #e5dff3; padding:7px 11px; text-align:left; vertical-align:top; }
+  .fval th { background:#f6f3fc; font-weight:600; color:#340b67; }
+  .fval tr:nth-child(even) td { background:#fbfaff; }
+  .fval sub, .fval sup { font-size:10.5px; }
+  .fval table table { margin:2px 0; }
+  .fr { font-weight:600; color:#554181; white-space:nowrap; }
+  .note { font-size:13px; color:#5a5570; background:#f8f6fd; border-left:3px solid #cfc4e8;
+            padding:8px 14px; margin:8px 0 0; }
+  .pending { color:#9a5b00; background:#fff7e6; border:1px dashed #e6c98a; border-radius:5px;
+            padding:0 6px; font-size:13px; }
+  .evidence { font-size:14px; color:#6b6480; padding:18px 0 22px; }
+  .footer { max-width:980px; margin:0 auto; padding:0 30px 30px; font-size:12px; color:#8a8199; }
+</style><link rel="stylesheet" href="styles.css"></head><body><a class="skip" href="#main">Skip to content</a><header class="topbar"><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open portfolio navigation">☰</button><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">KLE</span><span><span class="brand-name">KLE Technological University</span><span class="brand-campus">B. V. Bhoomaraddi Campus, Hubballi</span></span></a><span class="bar-divider"></span><div class="bar-meta"><div class="bar-context">Engineering portfolio</div><div class="bar-year">Foundation Integration · 2026–27</div></div><div class="bar-actions"><span class="bar-pill">● Public view</span><button class="print-button" type="button" onclick="window.print()" aria-label="Print current page">⎙</button></div></header><div class="mobile-backdrop" aria-hidden="true"></div><div class="app-shell"><aside class="sidebar" id="site-nav"><div class="project-code">T01 / A01</div><h2 class="project-title">FPGA-controlled<br>Variable Gain Amplifier</h2><p class="project-tags">Analog × Digital × Evidence</p><div class="nav-heading">Project portfolio / 16-step record</div><nav class="nav-list" aria-label="Portfolio pages"><a class="nav-link" href="index.html"><span class="nav-index">⌂</span><span>Project Overview</span></a><a class="nav-link" href="01-team-and-roles.html"><span class="nav-index">01</span><span>Team and roles</span></a><a class="nav-link" href="02-problem-and-need.html"><span class="nav-index">02</span><span>Problem Definition and Need Identification</span></a><a class="nav-link" href="03-concept-choices.html"><span class="nav-index">03</span><span>Concept Choices</span></a><a class="nav-link" href="04-functional-requirements.html"><span class="nav-index">04</span><span>Functional Requirements</span></a><a class="nav-link" href="05-architecture-and-subsystems.html"><span class="nav-index">05</span><span>System Architecture</span></a><a class="nav-link" href="06-design-and-calculations.html" aria-current="page"><span class="nav-index">06</span><span>Design and Calculations</span></a><a class="nav-link" href="07-foundation-integration-map.html"><span class="nav-index">07</span><span>Foundation Integration Map</span></a><a class="nav-link" href="08-build-and-verification.html"><span class="nav-index">08</span><span>Build and Verification</span></a><a class="nav-link" href="09-predicted-vs-measured.html"><span class="nav-index">09</span><span>Predicted vs Measured</span></a><a class="nav-link" href="10-failures-and-fixes.html"><span class="nav-index">10</span><span>Failures and Fixes</span></a><a class="nav-link" href="11-engineering-notebook.html"><span class="nav-index">11</span><span>Engineering Notebook</span></a><a class="nav-link" href="12-review-record.html"><span class="nav-index">12</span><span>Review Record</span></a><a class="nav-link" href="13-reflections-and-forward-links.html"><span class="nav-index">13</span><span>Reflections and Forward Links</span></a><a class="nav-link" href="14-final-demonstration.html"><span class="nav-index">14</span><span>Final Demonstration</span></a><a class="nav-link" href="15-project-files.html"><span class="nav-index">15</span><span>Project Files and References</span></a></nav></aside><main class="main-area" id="main"><p class="crumb">Theme 1 <span>›</span> Programmable Analog Gain Systems <span>›</span> Design and Calculations</p><header class="hero"><p class="eyebrow">PORTFOLIO PAGE 06 · FOUNDATION INTEGRATION</p><h1>Design and Calculations</h1><p class="subtitle">Each calculation is its own card: the FR it serves, the equation, the values, the result, the margin. Sprint 1 — Detailed Design</p><div class="hero-chips"><span class="hero-chip">Page 06 of 15</span><span class="hero-chip">8 content blocks</span><span class="hero-chip">Source-linked design</span></div></header><div class="legacy-content"><p class="meta">Page 6 &middot; due Review 4 &middot; source worksheets WS3 (Week 3), WS4 (Week 4), WS5 (Week 5) &middot; last updated 2026-10-26</p>
+  
+
+  <div class="record">
+    <p class="rec-label">Documented engineering record</p>
+
+    <div class="field">
+      <div class="fhead"><span class="fnum">01</span><span class="flabel">Calculation card 1 &mdash; Gain equation and the four gain values <span class="fr">FR2</span></span></div>
+      <div class="fval">
+        <table>
+          <tr><th>Field</th><th>Entry</th></tr>
+          <tr><td>Decision</td><td>Four discrete non-inverting gain levels &times;2, &times;3.2, &times;5.7 and &times;11, selected by a 2-bit code (S1, S0) from the Artix-7 FPGA driving a CD4052 analog multiplexer.</td></tr>
+          <tr><td>Options considered</td><td>1. Fixed-gain amplifier &mdash; set aside: limited dynamic range, small load-cell signals under-use the ADC range while large ones saturate the amplifier and the ADC.<br>2. Op-amp with feedback resistors switched by an analog multiplexer &mdash; chosen: simple, reliable, widely used for sensor signal conditioning, and all four levels follow from one 2-bit code.<br>3. Digital potentiometer / 4. Dedicated PGA IC &mdash; see page 3 for the reasons they were set aside.</td></tr>
+          <tr><td>FR served</td><td>FR2 (four digitally selectable gains), supporting FR1 (useful level for the XADC across 0&ndash;5 kg)</td></tr>
+          <tr><td>Equation</td><td>A<sub>v</sub> = 1 + R<sub>F</sub> / R<sub>in</sub> &nbsp;(non-inverting amplifier)</td></tr>
+          <tr><td>Values</td><td>R<sub>in</sub> = 1 k&Omega; fixed; R<sub>F</sub> selected by the CD4052.</td></tr>
+          <tr><td>Result</td><td>
+            <table>
+              <tr><th>Control (S1 S0)</th><th>11</th><th>10</th><th>01</th><th>00</th></tr>
+              <tr><th>R<sub>F</sub></th><td>1 k&Omega;</td><td>2.2 k&Omega;</td><td>4.7 k&Omega;</td><td>10 k&Omega;</td></tr>
+              <tr><th>Theoretical gain</th><td>&times;2</td><td>&times;3.2</td><td>&times;5.7</td><td>&times;11</td></tr>
+            </table></td></tr>
+          <tr><td>Margin</td><td>With pre-amp output &asymp;48 mV to &asymp;760 mV: &times;11 on 48 mV &rarr; &asymp;0.53 V; &times;2 on 760 mV &rarr; &asymp;1.52 V &mdash; inside the XADC 0&ndash;3.3 V input range at both extremes.</td></tr>
+          <tr><td>Predicted (dated)</td><td>Theoretical &times;2.0, &times;3.2, &times;5.7, &times;11.0 &mdash; recorded before simulation and build.</td></tr>
+          <tr><td>Learning</td><td><span class="pending">[ PENDING &mdash; after the bench measurement ]</span></td></tr>
+        </table>
+        <p class="note"><i>Open point for the team:</i> the design deck and the guide's worked example use R<sub>in</sub> = 10 k&Omega;
+        with R<sub>F</sub> = 10 / 22 / 47 / 100 k&Omega; &mdash; the same ratios, a different scale. State which value is
+        as-built before Review 4.</p></div>
+    </div>
+
+    <div class="field">
+      <div class="fhead"><span class="fnum">02</span><span class="flabel">Calculation card 2 &mdash; Gain-step distribution across the dynamic range <span class="fr">FR5</span></span></div>
+      <div class="fval">
+        <table>
+          <tr><th>Field</th><th>Entry</th></tr>
+          <tr><td>Equation</td><td>Dynamic range = 20 &middot; log<sub>10</sub>(max input / min input)</td></tr>
+          <tr><td>Values</td><td>Pre-amp output &asymp;760 mV maximum, &asymp;48 mV minimum (VGA input range)</td></tr>
+          <tr><td>Result</td><td>20 &middot; log<sub>10</sub>(760 / 48) &asymp; <b>24 dB</b></td></tr>
+          <tr><td>FR served</td><td>FR5 &mdash; four codes must span this range with no gaps</td></tr>
+          <tr><td>Margin</td><td><span class="pending">[ PENDING &mdash; WS2 &middot; C.2 coverage-map plot: sub-range covered by each code, gaps and overlap ]</span></td></tr>
+        </table></div>
+    </div>
+
+    <div class="field">
+      <div class="fhead"><span class="fnum">03</span><span class="flabel">Calculation card 3 &mdash; Digital control bus <span class="fr">FR2, FR6</span></span></div>
+      <div class="fval">
+        <table>
+          <tr><th>Field</th><th>Entry</th></tr>
+          <tr><td>Equation</td><td>Control bits = ceil(log<sub>2</sub>(gain steps)) = ceil(log<sub>2</sub>4) = <b>2</b> &rarr; S1, S0</td></tr>
+          <tr><td>Values</td><td>3.3 V CMOS from the Artix-7; CD4052 select inputs</td></tr>
+          <tr><td>FR served</td><td>FR2, FR6</td></tr>
+          <tr><td>Risk noted</td><td>A code change re-routes a resistor inside the feedback path &mdash; the address must be stable before the XADC sample is taken (Digital System Design).</td></tr>
+        </table></div>
+    </div>
+
+    <div class="field">
+      <div class="fhead"><span class="fnum">04</span><span class="flabel">Calculation card 4 &mdash; Gain-bandwidth requirement <span class="fr">FR4</span></span></div>
+      <div class="fval">
+        <table>
+          <tr><th>Field</th><th>Entry</th></tr>
+          <tr><td>Equation</td><td>Minimum GBW required = Gain(G4, highest) &times; f<sub>max</sub> &times; margin factor (5&ndash;10&times;)</td></tr>
+          <tr><td>Values</td><td>G4 = 11; f<sub>max</sub> = <span class="pending">[ PENDING &mdash; WS1 &middot; B.2, load-cell signal is DC/slowly varying, state the number used ]</span></td></tr>
+          <tr><td>Result</td><td><span class="pending">[ PENDING &mdash; WS3 &middot; B.1 ]</span></td></tr>
+          <tr><td>Selected part</td><td>NE5532 op-amp &mdash; GBW and slew rate from the datasheet: <span class="pending">[ PENDING &mdash; WS3 &middot; B.2 comparison of four candidates, chart goes here ]</span></td></tr>
+        </table></div>
+    </div>
+
+    <div class="field">
+      <div class="fhead"><span class="fnum">05</span><span class="flabel">Calculation card 5 &mdash; Gain accuracy and tolerance <span class="fr">FR3</span></span></div>
+      <div class="fval">
+        <table>
+          <tr><th>Field</th><th>Entry</th></tr>
+          <tr><td>Question</td><td>Does 1 % vs 5 % resistor tolerance, plus CD4052 on-resistance R<sub>ON</sub> in the gain expression, keep every code inside &plusmn;5 %?</td></tr>
+          <tr><td>Where R<sub>ON</sub> enters</td><td><span class="pending">[ PENDING &mdash; WS4 &middot; D: element selected for switching, why the alternative was rejected, and where R<sub>ON</sub> appears (numerator or denominator) ]</span></td></tr>
+          <tr><td>Result</td><td><span class="pending">[ PENDING &mdash; WS4 worst-case / Monte Carlo gain-error budget ]</span></td></tr>
+          <tr><td>All switches open</td><td><span class="pending">[ PENDING &mdash; WS4 &middot; A.4/A.5: what gain the circuit gives with every switch open, and which arrangement gives a defined useful gain ]</span></td></tr>
+        </table></div>
+    </div>
+
+    <div class="field">
+      <div class="fhead"><span class="fnum">06</span><span class="flabel">Component selection</span></div>
+      <div class="fval">
+        <table>
+          <tr><th>Part</th><th>Role</th><th>Why this part</th></tr>
+          <tr><td>5 kg load cell (4-wire strain gauge)</td><td>Sensor</td><td>Target load range 0&ndash;5 kg</td></tr>
+          <tr><td>INA126</td><td>Pre-amplifier</td><td>High input impedance, high CMRR, low noise &mdash; suited to bridge sensors</td></tr>
+          <tr><td>NE5532</td><td>Gain-stage op-amp</td><td><span class="pending">[ PENDING &mdash; justify from the WS3 &middot; B.2 comparison table: GBW, slew rate, offset, noise, supply rails, cost ]</span></td></tr>
+          <tr><td>CD4052</td><td>Analog multiplexer</td><td>Dual 4-channel mux selects one of four feedback resistors under S1 S0 control</td></tr>
+          <tr><td>Arty A7 (Artix-7)</td><td>Controller + ADC</td><td>On-chip 12-bit XADC, 0&ndash;3.3 V; generates S0/S1</td></tr>
+          <tr><td>Resistors and capacitors</td><td>Gain network, decoupling</td><td>Per gain and decoupling calculations &mdash; <span class="pending">[ PENDING: tolerance grade + reason ]</span></td></tr>
+        </table></div>
+    </div>
+
+    <div class="field">
+      <div class="fhead"><span class="fnum">07</span><span class="flabel">Bill of materials (draft) and schematic</span></div>
+      <div class="fval"><p><span class="pending">[ PENDING &mdash; full BOM with reference designators, tolerance grade, quantity, cost and the worksheet each value traces to (WS8 &middot; B.1); final as-built schematic with test points and FPGA pin names. ]</span></p></div>
+    </div>
+
+    <div class="field">
+      <div class="fhead"><span class="fnum">08</span><span class="flabel">Predictions recorded before the build</span></div>
+      <div class="fval"><ul>
+        <li>Theoretical gains &times;2.0, &times;3.2, &times;5.7, &times;11.0 &mdash; dated 2026-10-26, before LTspice runs and before hardware measurement.</li>
+        <li><span class="pending">[ PENDING &mdash; WS5 &middot; B.2 predicted &minus;3 dB bandwidth per code; WS5 &middot; B.3 slew-rate limit; WS6 &middot; D.2 settling budget ]</span></li>
+      </ul></div>
+    </div>
+
+    <p class="evidence">Supporting evidence &mdash; LTspice plots, the tolerance-analysis sheet and the draft BOM to be linked here. <span class="pending">[ PENDING ]</span></p>
+  </div></div><nav class="page-nav" aria-label="Page navigation"><a href="05-architecture-and-subsystems.html">← Previous</a><a href="07-foundation-integration-map.html">Next: Foundation Integration Map →</a></nav><footer class="site-footer">KLE Technological University · Electronics and Communication Engineering<br>FPGA-Controlled Variable Gain Amplifier · Team 01 · Academic Year 2026–27</footer></main></div><script src="site.js" defer></script></body></html>

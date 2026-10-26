@@ -1,0 +1,118 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#10243c"><meta name="description" content="KLE Technological University ECE mini project portfolio — Failures and Fixes"><title>Failures and Fixes · ECE Engineering Portfolio</title><style>
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: Arial, "Segoe UI", sans-serif; font-size:15px;
+         color:#253149; background:#fff; line-height:1.55; }
+  .banner { background:linear-gradient(135deg,#2a1152 0%,#3d1466 55%,#554181 100%);
+            color:#fff; padding:16px 26px; }
+  .banner .eyebrow { font-size:11px; letter-spacing:2px; text-transform:uppercase;
+            opacity:.82; margin:0 0 4px; }
+  .banner .proj { font-family:Georgia,serif; font-size:15px; font-weight:400; margin:0; }
+  .wrap { max-width:980px; margin:0 auto; padding:30px 30px 40px; }
+  .crumb { font-size:11px; letter-spacing:1.5px; text-transform:uppercase;
+            color:#8a8199; margin:0 0 6px; }
+  h1.title { font-family:Georgia,serif; font-size:38px; font-weight:400; color:#291354;
+            letter-spacing:-1px; margin:0 0 6px; line-height:1.1; }
+  .sub { font-size:15px; color:#5a5570; margin:0 0 6px; }
+  .meta { font-size:12px; color:#8a8199; margin:0 0 14px; }
+  .progress { font-size:13px; color:#7a6ba6; margin:0 0 4px; }
+  .record { border:1px solid #e5dff3; border-radius:12px; padding:6px 34px; margin:0 0 22px;
+            box-shadow:0 13px 35px rgba(98,0,79,.08); }
+  .rec-label { font-size:11px; letter-spacing:1.5px; text-transform:uppercase; color:#7a6ba6;
+            padding:22px 0 6px; }
+  .field { padding:20px 0; border-bottom:1px solid #efeaf9; }
+  .field:last-child { border-bottom:none; }
+  .fhead { display:flex; align-items:baseline; gap:14px; margin-bottom:8px; }
+  .fnum { font-family:Georgia,serif; font-size:26px; color:#a99bd0; line-height:1; }
+  .flabel { font-size:16px; font-weight:600; color:#340b67; }
+  .fval { padding-left:40px; }
+  .fval ol, .fval ul { margin:0; padding-left:20px; }
+  .fval li { margin:0 0 4px; }
+  .fval p { margin:0 0 8px; }
+  .fval b, .fval strong { color:#291354; }
+  .fval table { border-collapse:collapse; width:100%; margin:6px 0 4px; font-size:13.5px; }
+  .fval th, .fval td { border:1px solid #e5dff3; padding:7px 11px; text-align:left; vertical-align:top; }
+  .fval th { background:#f6f3fc; font-weight:600; color:#340b67; }
+  .fval tr:nth-child(even) td { background:#fbfaff; }
+  .fval sub, .fval sup { font-size:10.5px; }
+  .scroll { overflow-x:auto; }
+  .open { color:#9a5b00; font-weight:600; white-space:nowrap; }
+  .pending { color:#9a5b00; background:#fff7e6; border:1px dashed #e6c98a; border-radius:5px;
+            padding:0 6px; font-size:13px; }
+  .evidence { font-size:14px; color:#6b6480; padding:18px 0 22px; }
+  .footer { max-width:980px; margin:0 auto; padding:0 30px 30px; font-size:12px; color:#8a8199; }
+</style><link rel="stylesheet" href="styles.css"></head><body><a class="skip" href="#main">Skip to content</a><header class="topbar"><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open portfolio navigation">☰</button><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">KLE</span><span><span class="brand-name">KLE Technological University</span><span class="brand-campus">B. V. Bhoomaraddi Campus, Hubballi</span></span></a><span class="bar-divider"></span><div class="bar-meta"><div class="bar-context">Engineering portfolio</div><div class="bar-year">Foundation Integration · 2026–27</div></div><div class="bar-actions"><span class="bar-pill">● Public view</span><button class="print-button" type="button" onclick="window.print()" aria-label="Print current page">⎙</button></div></header><div class="mobile-backdrop" aria-hidden="true"></div><div class="app-shell"><aside class="sidebar" id="site-nav"><div class="project-code">T01 / A01</div><h2 class="project-title">FPGA-controlled<br>Variable Gain Amplifier</h2><p class="project-tags">Analog × Digital × Evidence</p><div class="nav-heading">Project portfolio / 16-step record</div><nav class="nav-list" aria-label="Portfolio pages"><a class="nav-link" href="index.html"><span class="nav-index">⌂</span><span>Project Overview</span></a><a class="nav-link" href="01-team-and-roles.html"><span class="nav-index">01</span><span>Team and roles</span></a><a class="nav-link" href="02-problem-and-need.html"><span class="nav-index">02</span><span>Problem Definition and Need Identification</span></a><a class="nav-link" href="03-concept-choices.html"><span class="nav-index">03</span><span>Concept Choices</span></a><a class="nav-link" href="04-functional-requirements.html"><span class="nav-index">04</span><span>Functional Requirements</span></a><a class="nav-link" href="05-architecture-and-subsystems.html"><span class="nav-index">05</span><span>System Architecture</span></a><a class="nav-link" href="06-design-and-calculations.html"><span class="nav-index">06</span><span>Design and Calculations</span></a><a class="nav-link" href="07-foundation-integration-map.html"><span class="nav-index">07</span><span>Foundation Integration Map</span></a><a class="nav-link" href="08-build-and-verification.html"><span class="nav-index">08</span><span>Build and Verification</span></a><a class="nav-link" href="09-predicted-vs-measured.html"><span class="nav-index">09</span><span>Predicted vs Measured</span></a><a class="nav-link" href="10-failures-and-fixes.html" aria-current="page"><span class="nav-index">10</span><span>Failures and Fixes</span></a><a class="nav-link" href="11-engineering-notebook.html"><span class="nav-index">11</span><span>Engineering Notebook</span></a><a class="nav-link" href="12-review-record.html"><span class="nav-index">12</span><span>Review Record</span></a><a class="nav-link" href="13-reflections-and-forward-links.html"><span class="nav-index">13</span><span>Reflections and Forward Links</span></a><a class="nav-link" href="14-final-demonstration.html"><span class="nav-index">14</span><span>Final Demonstration</span></a><a class="nav-link" href="15-project-files.html"><span class="nav-index">15</span><span>Project Files and References</span></a></nav></aside><main class="main-area" id="main"><p class="crumb">Theme 1 <span>›</span> Programmable Analog Gain Systems <span>›</span> Failures and Fixes</p><header class="hero"><p class="eyebrow">PORTFOLIO PAGE 10 · FOUNDATION INTEGRATION</p><h1>Failures and Fixes</h1><p class="subtitle">Every cycle: symptom → test performed → root cause → correction → re-measured → learning. A cycle is not closed until the re-measurement is recorded.</p><div class="hero-chips"><span class="hero-chip">Page 10 of 15</span><span class="hero-chip">5 content blocks</span><span class="hero-chip">Source-linked design</span></div></header><div class="legacy-content"><p class="meta">Page 10 &middot; due Review 5 (at least 2 cycles), Final Review (at least 3) &middot; source worksheets WS6, WS7, WS8 &middot; last updated 2026-10-26</p>
+  
+
+  <div class="record">
+    <p class="rec-label">Documented engineering record</p>
+
+    <div class="field">
+      <div class="fhead"><span class="fnum">01</span><span class="flabel">Cycle 1 &mdash; Output clips when the gain is too high for the input</span></div>
+      <div class="fval">
+        <table>
+          <tr><th>Field</th><th>Entry</th></tr>
+          <tr><td>Symptom</td><td>Output flattens (clipping) in simulation when a high gain code is used with a larger input &mdash; observed side by side with the unclipped case at a lower gain.</td></tr>
+          <tr><td>Test performed</td><td>LTspice run of the complete model at the same input with two gain settings; input and output waveforms compared against the XADC input limit.</td></tr>
+          <tr><td>Root cause</td><td>Input amplitude &times; programmed gain exceeded the linear output range / the 3.3 V ADC input limit &mdash; a fixed relationship, not a component fault.</td></tr>
+          <tr><td>Correction</td><td>Gain must fall as input rises: the gain-selection rule (switch down before the output clips), which is the reason the artefact is variable-gain at all.</td></tr>
+          <tr><td>Re-measured</td><td><span class="pending">[ PENDING &mdash; hardware: raise the input at each code until the clipping criterion from WS7 &middot; B.1 is met, record the max input before clipping ]</span></td></tr>
+          <tr><td>Learning</td><td>A calculated gain is not a usable gain: the usable setting depends on the input amplitude and the destination range, not on the amplifier alone.</td></tr>
+        </table></div>
+    </div>
+
+    <div class="field">
+      <div class="fhead"><span class="fnum">02</span><span class="flabel">Cycle 2 &mdash; Simulated gain sits below theory at every code</span></div>
+      <div class="fval">
+        <table>
+          <tr><th>Field</th><th>Entry</th></tr>
+          <tr><td>Symptom</td><td>LTspice gives 1.9 / 3.1 / 5.6 / 10.8 against theoretical 2.0 / 3.2 / 5.7 / 11.0 &mdash; every code reads low, by &minus;1.8 % to &minus;5.0 %.</td></tr>
+          <tr><td>Test performed</td><td>Gain measured from the simulated input/output waveforms at each code; error computed against 1 + R<sub>F</sub>/R<sub>in</sub>.</td></tr>
+          <tr><td>Root cause</td><td><span class="pending">[ PENDING &mdash; candidates to rule out one at a time: CD4052 on-resistance in the feedback path, op-amp finite open-loop gain at the test frequency, resistor values/ tolerances in the model, probe/loading nodes ]</span></td></tr>
+          <tr><td>Correction</td><td><span class="pending">[ PENDING &mdash; depends on the cause found; may be a model fix or a design change ]</span></td></tr>
+          <tr><td>Re-measured</td><td><span class="pending">[ PENDING &mdash; bench measurement at all four codes (WS6 &middot; C) ]</span></td></tr>
+          <tr><td>Learning</td><td>The error is systematic (same sign at every code), which points at a shared element in the gain expression rather than a per-setting mistake.</td></tr>
+        </table></div>
+    </div>
+
+    <div class="field">
+      <div class="fhead"><span class="fnum">03</span><span class="flabel">Cycle 3 &mdash; XADC reading accuracy <span class="open">(open)</span></span></div>
+      <div class="fval">
+        <table>
+          <tr><th>Field</th><th>Entry</th></tr>
+          <tr><td>Symptom</td><td>XADC readings do not yet agree with the expected conditioned signal level &mdash; identified as "under investigation" at the current development stage.</td></tr>
+          <tr><td>Test performed</td><td><span class="pending">[ PENDING &mdash; record exactly what was read back: digital codes vs the voltage applied at the XADC pin, and what the scope showed at the pin ]</span></td></tr>
+          <tr><td>Root cause</td><td><span class="pending">[ PENDING &mdash; candidates: input range / referencing configuration, single-ended vs differential setting, source impedance too high for the XADC, averaging/decimation settings, code-to-voltage conversion in software ]</span></td></tr>
+          <tr><td>Correction</td><td><span class="pending">[ PENDING ]</span></td></tr>
+          <tr><td>Re-measured</td><td><span class="pending">[ PENDING &mdash; sweep the input and compare readback against a DMM/scope at the pin ]</span></td></tr>
+          <tr><td>Learning</td><td><span class="pending">[ PENDING &mdash; expected: the digital end of an analog chain needs its own verification, not just the analog half. ]</span></td></tr>
+        </table></div>
+    </div>
+
+    <div class="field">
+      <div class="fhead"><span class="fnum">04</span><span class="flabel">Cycle 4 &mdash; Gain-switching glitch (to be filled from WS6)</span></div>
+      <div class="fval">
+        <table>
+          <tr><th>Field</th><th>Entry</th></tr>
+          <tr><td>Symptom</td><td><span class="pending">[ PENDING &mdash; WS6: output behaviour at the instant the FPGA changes S1/S0; probe on S0/S1 and on the output during a code change ]</span></td></tr>
+          <tr><td>Test performed</td><td><span class="pending">[ PENDING ]</span></td></tr>
+          <tr><td>Root cause</td><td><span class="pending">[ PENDING &mdash; candidate: channel overlap / charge injection during the address change into the feedback node ]</span></td></tr>
+          <tr><td>Correction</td><td><span class="pending">[ PENDING &mdash; candidate: enforce the change only when the previous code is stable, hold the XADC sample until the output settles (break-before-make) ]</span></td></tr>
+          <tr><td>Re-measured</td><td><span class="pending">[ PENDING &mdash; scope capture triggered on the control line, settle to 1 % ]</span></td></tr>
+          <tr><td>Learning</td><td><span class="pending">[ PENDING ]</span></td></tr>
+        </table></div>
+    </div>
+
+    <div class="field">
+      <div class="fhead"><span class="fnum">05</span><span class="flabel">Symptom &rarr; cause &rarr; verification log</span></div>
+      <div class="fval">
+        <div class="scroll"><table>
+          <tr><th>Symptom observed</th><th>Likely cause</th><th>How it was verified</th><th>Fixed?</th></tr>
+          <tr><td>Output clipping at high gain</td><td>Gain &times; input beyond output/ADC range</td><td>Side-by-side simulation at two gain settings</td><td>Design rule (range selection) &mdash; hardware verification pending</td></tr>
+          <tr><td>All codes read low in simulation</td><td><span class="pending">[ PENDING ]</span></td><td>Error comparison across four codes</td><td class="open">No &mdash; open</td></tr>
+          <tr><td>XADC readback inaccurate</td><td><span class="pending">[ PENDING ]</span></td><td><span class="pending">[ PENDING ]</span></td><td class="open">No &mdash; under investigation</td></tr>
+          <tr><td>Spikes on the output at the FPGA clock frequency with no gain change</td><td><span class="pending">[ PENDING &mdash; WS6 &middot; H: coupling path from the digital side ]</span></td><td><span class="pending">[ PENDING ]</span></td><td><span class="pending">[ PENDING ]</span></td></tr>
+        </table></div></div>
+    </div>
+
+    <p class="evidence">Supporting evidence &mdash; side-by-side clipping captures and the open-cycle bench notes to be linked here as cycles close. <span class="pending">[ PENDING ]</span></p>
+  </div></div><nav class="page-nav" aria-label="Page navigation"><a href="09-predicted-vs-measured.html">← Previous</a><a href="11-engineering-notebook.html">Next: Engineering Notebook →</a></nav><footer class="site-footer">KLE Technological University · Electronics and Communication Engineering<br>FPGA-Controlled Variable Gain Amplifier · Team 01 · Academic Year 2026–27</footer></main></div><script src="site.js" defer></script></body></html>

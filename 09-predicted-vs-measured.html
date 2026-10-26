@@ -1,0 +1,122 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#10243c"><meta name="description" content="KLE Technological University ECE mini project portfolio — Predicted vs Measured"><title>Predicted vs Measured · ECE Engineering Portfolio</title><style>
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: Arial, "Segoe UI", sans-serif; font-size:15px;
+         color:#253149; background:#fff; line-height:1.55; }
+  .banner { background:linear-gradient(135deg,#2a1152 0%,#3d1466 55%,#554181 100%);
+            color:#fff; padding:16px 26px; }
+  .banner .eyebrow { font-size:11px; letter-spacing:2px; text-transform:uppercase;
+            opacity:.82; margin:0 0 4px; }
+  .banner .proj { font-family:Georgia,serif; font-size:15px; font-weight:400; margin:0; }
+  .wrap { max-width:980px; margin:0 auto; padding:30px 30px 40px; }
+  .crumb { font-size:11px; letter-spacing:1.5px; text-transform:uppercase;
+            color:#8a8199; margin:0 0 6px; }
+  h1.title { font-family:Georgia,serif; font-size:38px; font-weight:400; color:#291354;
+            letter-spacing:-1px; margin:0 0 6px; line-height:1.1; }
+  .sub { font-size:15px; color:#5a5570; margin:0 0 6px; }
+  .meta { font-size:12px; color:#8a8199; margin:0 0 14px; }
+  .progress { font-size:13px; color:#7a6ba6; margin:0 0 4px; }
+  .record { border:1px solid #e5dff3; border-radius:12px; padding:6px 34px; margin:0 0 22px;
+            box-shadow:0 13px 35px rgba(98,0,79,.08); }
+  .rec-label { font-size:11px; letter-spacing:1.5px; text-transform:uppercase; color:#7a6ba6;
+            padding:22px 0 6px; }
+  .field { padding:20px 0; border-bottom:1px solid #efeaf9; }
+  .field:last-child { border-bottom:none; }
+  .fhead { display:flex; align-items:baseline; gap:14px; margin-bottom:8px; }
+  .fnum { font-family:Georgia,serif; font-size:26px; color:#a99bd0; line-height:1; }
+  .flabel { font-size:16px; font-weight:600; color:#340b67; }
+  .fval { padding-left:40px; }
+  .fval ol, .fval ul { margin:0; padding-left:20px; }
+  .fval li { margin:0 0 4px; }
+  .fval p { margin:0 0 8px; }
+  .fval b, .fval strong { color:#291354; }
+  .fval table { border-collapse:collapse; width:100%; margin:6px 0 4px; font-size:13.5px; }
+  .fval th, .fval td { border:1px solid #e5dff3; padding:7px 11px; text-align:left; vertical-align:top; }
+  .fval th { background:#f6f3fc; font-weight:600; color:#340b67; }
+  .fval tr:nth-child(even) td { background:#fbfaff; }
+  .fval sub, .fval sup { font-size:10.5px; }
+  .scroll { overflow-x:auto; }
+  .scroll table { min-width:880px; font-size:12.5px; }
+  .scroll th, .scroll td { padding:6px 8px; }
+  .fr { font-weight:600; color:#554181; white-space:nowrap; }
+  .placeholder { color:#6b6480; background:#f8f6fd; border:1px dashed #cfc4e8;
+            border-radius:8px; padding:12px 16px; font-size:13.5px; }
+  .pending { color:#9a5b00; background:#fff7e6; border:1px dashed #e6c98a; border-radius:5px;
+            padding:0 6px; font-size:13px; }
+  .evidence { font-size:14px; color:#6b6480; padding:18px 0 22px; }
+  .footer { max-width:980px; margin:0 auto; padding:0 30px 30px; font-size:12px; color:#8a8199; }
+</style><link rel="stylesheet" href="styles.css"></head><body><a class="skip" href="#main">Skip to content</a><header class="topbar"><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open portfolio navigation">☰</button><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">KLE</span><span><span class="brand-name">KLE Technological University</span><span class="brand-campus">B. V. Bhoomaraddi Campus, Hubballi</span></span></a><span class="bar-divider"></span><div class="bar-meta"><div class="bar-context">Engineering portfolio</div><div class="bar-year">Foundation Integration · 2026–27</div></div><div class="bar-actions"><span class="bar-pill">● Public view</span><button class="print-button" type="button" onclick="window.print()" aria-label="Print current page">⎙</button></div></header><div class="mobile-backdrop" aria-hidden="true"></div><div class="app-shell"><aside class="sidebar" id="site-nav"><div class="project-code">T01 / A01</div><h2 class="project-title">FPGA-controlled<br>Variable Gain Amplifier</h2><p class="project-tags">Analog × Digital × Evidence</p><div class="nav-heading">Project portfolio / 16-step record</div><nav class="nav-list" aria-label="Portfolio pages"><a class="nav-link" href="index.html"><span class="nav-index">⌂</span><span>Project Overview</span></a><a class="nav-link" href="01-team-and-roles.html"><span class="nav-index">01</span><span>Team and roles</span></a><a class="nav-link" href="02-problem-and-need.html"><span class="nav-index">02</span><span>Problem Definition and Need Identification</span></a><a class="nav-link" href="03-concept-choices.html"><span class="nav-index">03</span><span>Concept Choices</span></a><a class="nav-link" href="04-functional-requirements.html"><span class="nav-index">04</span><span>Functional Requirements</span></a><a class="nav-link" href="05-architecture-and-subsystems.html"><span class="nav-index">05</span><span>System Architecture</span></a><a class="nav-link" href="06-design-and-calculations.html"><span class="nav-index">06</span><span>Design and Calculations</span></a><a class="nav-link" href="07-foundation-integration-map.html"><span class="nav-index">07</span><span>Foundation Integration Map</span></a><a class="nav-link" href="08-build-and-verification.html"><span class="nav-index">08</span><span>Build and Verification</span></a><a class="nav-link" href="09-predicted-vs-measured.html" aria-current="page"><span class="nav-index">09</span><span>Predicted vs Measured</span></a><a class="nav-link" href="10-failures-and-fixes.html"><span class="nav-index">10</span><span>Failures and Fixes</span></a><a class="nav-link" href="11-engineering-notebook.html"><span class="nav-index">11</span><span>Engineering Notebook</span></a><a class="nav-link" href="12-review-record.html"><span class="nav-index">12</span><span>Review Record</span></a><a class="nav-link" href="13-reflections-and-forward-links.html"><span class="nav-index">13</span><span>Reflections and Forward Links</span></a><a class="nav-link" href="14-final-demonstration.html"><span class="nav-index">14</span><span>Final Demonstration</span></a><a class="nav-link" href="15-project-files.html"><span class="nav-index">15</span><span>Project Files and References</span></a></nav></aside><main class="main-area" id="main"><p class="crumb">Theme 1 <span>›</span> Programmable Analog Gain Systems <span>›</span> Predicted vs Measured</p><header class="hero"><p class="eyebrow">PORTFOLIO PAGE 09 · FOUNDATION INTEGRATION</p><h1>Predicted vs Measured</h1><p class="subtitle">Prediction, measurement, deviation and explanation for every functional requirement. A prediction must carry a date earlier than the measurement it is judged against.</p><div class="hero-chips"><span class="hero-chip">Page 09 of 15</span><span class="hero-chip">3 content blocks</span><span class="hero-chip">Source-linked design</span></div></header><div class="legacy-content"><p class="meta">Page 9 &middot; due Final Review &middot; source worksheets WS7, WS8, WS9 &middot; last updated 2026-10-26</p>
+  
+
+  <div class="record">
+    <p class="rec-label">Documented engineering record</p>
+
+    <div class="field">
+      <div class="fhead"><span class="fnum">01</span><span class="flabel">Validation matrix</span></div>
+      <div class="fval">
+        <div class="scroll"><table>
+          <tr><th>FR / quantity</th><th>Target</th><th>Prediction (dated)</th><th>Measured (worst case)</th><th>Deviation</th><th>Explanation</th><th>Evidence</th></tr>
+          <tr>
+            <td class="fr">FR2</td><td>&times;2.0</td><td>&times;2.0 (2026-10-26, theory)</td>
+            <td>Simulation &times;1.9 &middot; bench <span class="pending">[ PENDING ]</span></td><td>sim &minus;5.0 %</td>
+            <td><span class="pending">[ PENDING &mdash; simulation includes real model parameters; confirm against hardware ]</span></td><td>page 8</td>
+          </tr>
+          <tr>
+            <td class="fr">FR2</td><td>&times;3.2</td><td>&times;3.2 (2026-10-26, theory)</td>
+            <td>Simulation &times;3.1 &middot; bench <span class="pending">[ PENDING ]</span></td><td>sim &minus;3.1 %</td>
+            <td><span class="pending">[ PENDING ]</span></td><td>page 8</td>
+          </tr>
+          <tr>
+            <td class="fr">FR2</td><td>&times;5.7</td><td>&times;5.7 (2026-10-26, theory)</td>
+            <td>Simulation &times;5.6 &middot; bench <span class="pending">[ PENDING ]</span></td><td>sim &minus;1.8 %</td>
+            <td><span class="pending">[ PENDING ]</span></td><td>page 8</td>
+          </tr>
+          <tr>
+            <td class="fr">FR2</td><td>&times;11.0</td><td>&times;11.0 (2026-10-26, theory)</td>
+            <td>Simulation &times;10.8 &middot; bench <span class="pending">[ PENDING ]</span></td><td>sim &minus;1.8 %</td>
+            <td><span class="pending">[ PENDING ]</span></td><td>page 8</td>
+          </tr>
+          <tr><td class="fr">FR3</td><td>&plusmn;5 %</td><td><span class="pending">[ PENDING &mdash; WS4 worst-case budget ]</span></td><td><span class="pending">[ PENDING bench ]</span></td><td>&mdash;</td><td>&mdash;</td><td>WS4, page 8</td></tr>
+          <tr><td class="fr">FR4</td><td>1 % in &le; 50 &micro;s</td><td><span class="pending">[ PENDING &mdash; WS6 &middot; D.2 budget ]</span></td><td><span class="pending">[ PENDING scope capture ]</span></td><td>&mdash;</td><td>&mdash;</td><td>WS6, page 8</td></tr>
+          <tr><td class="fr">FR5</td><td>No gaps across 0&ndash;5 kg</td><td><span class="pending">[ PENDING &mdash; WS2 &middot; C.2 paper map ]</span></td><td><span class="pending">[ PENDING &mdash; WS7 &middot; B.2 measured ranges ]</span></td><td>&mdash;</td><td>&mdash;</td><td>WS7</td></tr>
+          <tr><td>Bandwidth at highest gain</td><td><span class="pending">[ PENDING &mdash; WS2 &middot; B.1 ]</span></td><td><span class="pending">[ PENDING &mdash; GBW &divide; noise gain, WS5 &middot; B.2 ]</span></td><td><span class="pending">[ PENDING &mdash; WS5 &middot; C sweep ]</span></td><td>&mdash;</td><td>&mdash;</td><td>WS5</td></tr>
+          <tr><td>Output offset at highest gain</td><td><span class="pending">[ PENDING ]</span></td><td><span class="pending">[ PENDING &mdash; V<sub>OS</sub> &times; noise gain, WS7 &middot; D.1 ]</span></td><td><span class="pending">[ PENDING &mdash; WS7 &middot; D.2 ]</span></td><td>&mdash;</td><td>&mdash;</td><td>WS7</td></tr>
+          <tr><td>Output noise / SNR</td><td><span class="pending">[ PENDING &mdash; WS2 &middot; B.4 ]</span></td><td><span class="pending">[ PENDING &mdash; e<sub>n</sub> &times; noise gain &times; &radic;(1.57 f<sub>&minus;3dB</sub>) ]</span></td><td><span class="pending">[ PENDING ]</span></td><td>&mdash;</td><td>&mdash;</td><td>WS7</td></tr>
+          <tr><td>Distortion (THD)</td><td><span class="pending">[ PENDING ]</span></td><td><span class="pending">[ PENDING &mdash; prediction before FFT ]</span></td><td><span class="pending">[ PENDING &mdash; WS7 &middot; E ]</span></td><td>&mdash;</td><td>&mdash;</td><td>WS7</td></tr>
+          <tr><td class="fr">FR1</td><td>Inside XADC input range, target up to 1 V</td><td>&asymp;0.53 V at &times;11 on 48 mV; &asymp;1.52 V at &times;2 on 760 mV (2026-10-26, calculation)</td><td><span class="pending">[ PENDING bench ]</span></td><td>&mdash;</td><td>&mdash;</td><td>page 6, card 1</td></tr>
+          <tr><td class="fr">FR6</td><td>Defined, safe</td><td><span class="pending">[ PENDING &mdash; WS5 &middot; B.3 ]</span></td><td><span class="pending">[ PENDING &mdash; WS6 &middot; B.1 ]</span></td><td>&mdash;</td><td>&mdash;</td><td>WS6</td></tr>
+        </table></div></div>
+    </div>
+
+    <div class="field">
+      <div class="fhead"><span class="fnum">02</span><span class="flabel">Requirement-by-requirement summary (WS7 &middot; G)</span></div>
+      <div class="fval">
+        <div class="scroll"><table>
+          <tr><th>Requirement</th><th>Target</th><th>Prediction</th><th>Measured (worst case)</th><th>Pass / Fail</th><th>Evidence</th></tr>
+          <tr><td>Gain values G1&ndash;G4</td><td>&times;2, &times;3.2, &times;5.7, &times;11</td><td>theory values</td><td>sim 1.9 / 3.1 / 5.6 / 10.8</td><td><span class="pending">[ PENDING bench ]</span></td><td>page 8</td></tr>
+          <tr><td>Gain accuracy</td><td>&plusmn;5 %</td><td><span class="pending">[ PENDING ]</span></td><td><span class="pending">[ PENDING ]</span></td><td>&mdash;</td><td>&mdash;</td></tr>
+          <tr><td>Bandwidth at highest gain</td><td><span class="pending">[ PENDING ]</span></td><td><span class="pending">[ PENDING ]</span></td><td><span class="pending">[ PENDING ]</span></td><td>&mdash;</td><td>&mdash;</td></tr>
+          <tr><td>Settling after gain change</td><td>1 % in &le; 50 &micro;s</td><td><span class="pending">[ PENDING ]</span></td><td><span class="pending">[ PENDING ]</span></td><td>&mdash;</td><td>&mdash;</td></tr>
+          <tr><td>Input range covered, no gaps</td><td>No gaps</td><td><span class="pending">[ PENDING ]</span></td><td><span class="pending">[ PENDING ]</span></td><td>&mdash;</td><td>&mdash;</td></tr>
+          <tr><td>Output offset at highest gain</td><td><span class="pending">[ PENDING ]</span></td><td><span class="pending">[ PENDING ]</span></td><td><span class="pending">[ PENDING ]</span></td><td>&mdash;</td><td>&mdash;</td></tr>
+          <tr><td>Output noise / SNR</td><td><span class="pending">[ PENDING ]</span></td><td><span class="pending">[ PENDING ]</span></td><td><span class="pending">[ PENDING ]</span></td><td>&mdash;</td><td>&mdash;</td></tr>
+          <tr><td>Distortion (THD)</td><td><span class="pending">[ PENDING ]</span></td><td><span class="pending">[ PENDING ]</span></td><td><span class="pending">[ PENDING ]</span></td><td>&mdash;</td><td>&mdash;</td></tr>
+          <tr><td>Gain with real source impedance</td><td><span class="pending">[ PENDING ]</span></td><td><span class="pending">[ PENDING ]</span></td><td><span class="pending">[ PENDING ]</span></td><td>&mdash;</td><td>&mdash;</td></tr>
+          <tr><td>Safe power-up / default gain</td><td>Defined, safe</td><td><span class="pending">[ PENDING ]</span></td><td><span class="pending">[ PENDING ]</span></td><td>&mdash;</td><td>&mdash;</td></tr>
+        </table></div></div>
+    </div>
+
+    <div class="field">
+      <div class="fhead"><span class="fnum">03</span><span class="flabel">Instrument settings and setup</span></div>
+      <div class="fval">
+        <table>
+          <tr><th>Item</th><th>Model / setting</th><th>Why it matters</th></tr>
+          <tr><td>Function generator</td><td><span class="pending">[ PENDING ]</span></td><td>Output impedance, flatness at high frequency; measure V<sub>in</sub> at the amplifier pin, not the generator display</td></tr>
+          <tr><td>Oscilloscope</td><td><span class="pending">[ PENDING ]</span></td><td>Bandwidth must be &gg; the highest f<sub>&minus;3dB</sub> measured</td></tr>
+          <tr><td>Probes (&times;1 / &times;10) and bandwidth limit</td><td><span class="pending">[ PENDING ]</span></td><td>&times;1 probes add capacitance; a 20 MHz limit can hide or fake a roll-off</td></tr>
+          <tr><td>How the gain code is held</td><td><span class="pending">[ PENDING &mdash; FPGA / jumpers / fixed logic levels ]</span></td><td>State which was used for each capture</td></tr>
+        </table>
+        <p class="placeholder">[ PLACEHOLDER &mdash; upload the setup photo showing generator, board, probes and load. ]</p></div>
+    </div>
+
+    <p class="evidence">Supporting evidence &mdash; scope captures and sweep plots to be linked beside the rows they validate. <span class="pending">[ PENDING ]</span></p>
+  </div></div><nav class="page-nav" aria-label="Page navigation"><a href="08-build-and-verification.html">← Previous</a><a href="10-failures-and-fixes.html">Next: Failures and Fixes →</a></nav><footer class="site-footer">KLE Technological University · Electronics and Communication Engineering<br>FPGA-Controlled Variable Gain Amplifier · Team 01 · Academic Year 2026–27</footer></main></div><script src="site.js" defer></script></body></html>

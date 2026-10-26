@@ -1,0 +1,150 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#10243c"><meta name="description" content="KLE Technological University ECE mini project portfolio — Foundation Integration Map"><title>Foundation Integration Map · ECE Engineering Portfolio</title><style>
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: Arial, "Segoe UI", sans-serif; font-size:15px;
+         color:#253149; background:#fff; line-height:1.55; }
+  .banner { background:linear-gradient(135deg,#2a1152 0%,#3d1466 55%,#554181 100%);
+            color:#fff; padding:16px 26px; }
+  .banner .eyebrow { font-size:11px; letter-spacing:2px; text-transform:uppercase;
+            opacity:.82; margin:0 0 4px; }
+  .banner .proj { font-family:Georgia,serif; font-size:15px; font-weight:400; margin:0; }
+  .wrap { max-width:980px; margin:0 auto; padding:30px 30px 40px; }
+  .crumb { font-size:11px; letter-spacing:1.5px; text-transform:uppercase;
+            color:#8a8199; margin:0 0 6px; }
+  h1.title { font-family:Georgia,serif; font-size:38px; font-weight:400; color:#291354;
+            letter-spacing:-1px; margin:0 0 6px; line-height:1.1; }
+  .sub { font-size:15px; color:#5a5570; margin:0 0 6px; }
+  .meta { font-size:12px; color:#8a8199; margin:0 0 14px; }
+  .progress { font-size:13px; color:#7a6ba6; margin:0 0 4px; }
+  .record { border:1px solid #e5dff3; border-radius:12px; padding:6px 34px; margin:0 0 22px;
+            box-shadow:0 13px 35px rgba(98,0,79,.08); }
+  .rec-label { font-size:11px; letter-spacing:1.5px; text-transform:uppercase; color:#7a6ba6;
+            padding:22px 0 6px; }
+  .field { padding:20px 0; border-bottom:1px solid #efeaf9; }
+  .field:last-child { border-bottom:none; }
+  .fhead { display:flex; align-items:baseline; gap:14px; margin-bottom:8px; }
+  .fnum { font-family:Georgia,serif; font-size:26px; color:#a99bd0; line-height:1; }
+  .flabel { font-size:16px; font-weight:600; color:#340b67; }
+  .fval { padding-left:40px; }
+  .fval ol, .fval ul { margin:0; padding-left:20px; }
+  .fval li { margin:0 0 4px; }
+  .fval p { margin:0 0 8px; }
+  .fval b, .fval strong { color:#291354; }
+  .fval table { border-collapse:collapse; width:100%; margin:6px 0 4px; font-size:13.5px; }
+  .fval th, .fval td { border:1px solid #e5dff3; padding:7px 11px; text-align:left; vertical-align:top; }
+  .fval th { background:#f6f3fc; font-weight:600; color:#340b67; }
+  .fval tr:nth-child(even) td { background:#fbfaff; }
+  .fval sub, .fval sup { font-size:10.5px; }
+  .scroll { overflow-x:auto; }
+  .scroll table { min-width:860px; font-size:12.5px; }
+  .scroll th, .scroll td { padding:6px 8px; }
+  .dc { font-weight:600; color:#554181; white-space:nowrap; }
+  .lvl { font-size:12px; color:#7a6ba6; white-space:nowrap; }
+  .pending { color:#9a5b00; background:#fff7e6; border:1px dashed #e6c98a; border-radius:5px;
+            padding:0 6px; font-size:13px; }
+  .evidence { font-size:14px; color:#6b6480; padding:18px 0 22px; }
+  .footer { max-width:980px; margin:0 auto; padding:0 30px 30px; font-size:12px; color:#8a8199; }
+</style><link rel="stylesheet" href="styles.css"></head><body><a class="skip" href="#main">Skip to content</a><header class="topbar"><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open portfolio navigation">☰</button><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">KLE</span><span><span class="brand-name">KLE Technological University</span><span class="brand-campus">B. V. Bhoomaraddi Campus, Hubballi</span></span></a><span class="bar-divider"></span><div class="bar-meta"><div class="bar-context">Engineering portfolio</div><div class="bar-year">Foundation Integration · 2026–27</div></div><div class="bar-actions"><span class="bar-pill">● Public view</span><button class="print-button" type="button" onclick="window.print()" aria-label="Print current page">⎙</button></div></header><div class="mobile-backdrop" aria-hidden="true"></div><div class="app-shell"><aside class="sidebar" id="site-nav"><div class="project-code">T01 / A01</div><h2 class="project-title">FPGA-controlled<br>Variable Gain Amplifier</h2><p class="project-tags">Analog × Digital × Evidence</p><div class="nav-heading">Project portfolio / 16-step record</div><nav class="nav-list" aria-label="Portfolio pages"><a class="nav-link" href="index.html"><span class="nav-index">⌂</span><span>Project Overview</span></a><a class="nav-link" href="01-team-and-roles.html"><span class="nav-index">01</span><span>Team and roles</span></a><a class="nav-link" href="02-problem-and-need.html"><span class="nav-index">02</span><span>Problem Definition and Need Identification</span></a><a class="nav-link" href="03-concept-choices.html"><span class="nav-index">03</span><span>Concept Choices</span></a><a class="nav-link" href="04-functional-requirements.html"><span class="nav-index">04</span><span>Functional Requirements</span></a><a class="nav-link" href="05-architecture-and-subsystems.html"><span class="nav-index">05</span><span>System Architecture</span></a><a class="nav-link" href="06-design-and-calculations.html"><span class="nav-index">06</span><span>Design and Calculations</span></a><a class="nav-link" href="07-foundation-integration-map.html" aria-current="page"><span class="nav-index">07</span><span>Foundation Integration Map</span></a><a class="nav-link" href="08-build-and-verification.html"><span class="nav-index">08</span><span>Build and Verification</span></a><a class="nav-link" href="09-predicted-vs-measured.html"><span class="nav-index">09</span><span>Predicted vs Measured</span></a><a class="nav-link" href="10-failures-and-fixes.html"><span class="nav-index">10</span><span>Failures and Fixes</span></a><a class="nav-link" href="11-engineering-notebook.html"><span class="nav-index">11</span><span>Engineering Notebook</span></a><a class="nav-link" href="12-review-record.html"><span class="nav-index">12</span><span>Review Record</span></a><a class="nav-link" href="13-reflections-and-forward-links.html"><span class="nav-index">13</span><span>Reflections and Forward Links</span></a><a class="nav-link" href="14-final-demonstration.html"><span class="nav-index">14</span><span>Final Demonstration</span></a><a class="nav-link" href="15-project-files.html"><span class="nav-index">15</span><span>Project Files and References</span></a></nav></aside><main class="main-area" id="main"><p class="crumb">Theme 1 <span>›</span> Programmable Analog Gain Systems <span>›</span> Foundation Integration Map</p><header class="hero"><p class="eyebrow">PORTFOLIO PAGE 07 · FOUNDATION INTEGRATION</p><h1>Foundation Integration Map</h1><p class="subtitle">One card per significant design decision — concept, how it was applied with our numbers, and whether a measurement agreed. A course name alone is not integration.</p><div class="hero-chips"><span class="hero-chip">Page 07 of 15</span><span class="hero-chip">3 content blocks</span><span class="hero-chip">Source-linked design</span></div></header><div class="legacy-content"><p class="meta">Page 7 &middot; due Reviews 3, 4 and 5 (cards added as decisions are made) &middot; source worksheets WS4, WS9 &middot; last updated 2026-10-26</p>
+  
+
+  <div class="record">
+    <p class="rec-label">Documented engineering record</p>
+
+    <div class="field">
+      <div class="fhead"><span class="fnum">01</span><span class="flabel">Integration levels</span></div>
+      <div class="fval"><ul>
+        <li><b>Named</b> &mdash; the course is mentioned. A starting point only.</li>
+        <li><b>Applied</b> &mdash; the concept and equation are shown with the team's numbers, and the FR it serves is stated.</li>
+        <li><b>Verified</b> &mdash; the prediction is compared with a measurement, and the difference is explained using a foundation concept.</li>
+      </ul></div>
+    </div>
+
+    <div class="field">
+      <div class="fhead"><span class="fnum">02</span><span class="flabel">Decision map &mdash; nine decision cards</span></div>
+      <div class="fval">
+        <div class="scroll"><table>
+          <tr><th>Card</th><th>Decision</th><th>FR</th><th>Course &mdash; concept</th><th>How it was applied (our numbers)</th><th>Where courses meet</th><th>Level</th><th>Page</th></tr>
+          <tr>
+            <td class="dc">DC-01</td><td>Four gain levels &times;2, &times;3.2, &times;5.7, &times;11</td><td>FR2</td>
+            <td>Analog Electronic Circuits &mdash; closed-loop gain of the non-inverting amplifier</td>
+            <td>A<sub>v</sub> = 1 + R<sub>F</sub>/R<sub>in</sub>, R<sub>in</sub> = 1 k&Omega;, R<sub>F</sub> = 1 k / 2.2 k / 4.7 k / 10 k&Omega;</td>
+            <td>Signals &amp; Systems &mdash; dynamic range &asymp;24 dB of the pre-amp output sets how far the four levels must spread</td>
+            <td class="lvl">Applied &rarr; Verified (after bench)</td><td>6</td>
+          </tr>
+          <tr>
+            <td class="dc">DC-02</td><td>Non-inverting topology instead of inverting</td><td>FR1, FR3</td>
+            <td>Analog Electronic Circuits &mdash; loading and input impedance of inverting vs non-inverting stages</td>
+            <td><span class="pending">[ PENDING &mdash; WS3 &middot; C.2: input impedance, gain sign, and what the source impedance demands ]</span></td>
+            <td>Network Analysis &mdash; source impedance and loading of the INA126 output</td>
+            <td class="lvl">Applied</td><td>5</td>
+          </tr>
+          <tr>
+            <td class="dc">DC-03</td><td>Op-amp selection (NE5532)</td><td>FR1, FR4</td>
+            <td>Linear Integrated Circuits &mdash; GBW, slew rate, input offset, supply rails</td>
+            <td><span class="pending">[ PENDING &mdash; WS3 &middot; B.1/B.2: required GBW = G4 &times; f<sub>max</sub> &times; margin vs four candidates ]</span></td>
+            <td>Signals &amp; Systems &mdash; bandwidth needed at the highest gain</td>
+            <td class="lvl">Applied</td><td>6</td>
+          </tr>
+          <tr>
+            <td class="dc">DC-04</td><td>Switch type and where R<sub>ON</sub> sits</td><td>FR3</td>
+            <td>Linear Integrated Circuits / Analog Electronic Circuits &mdash; switch on-resistance loading the feedback network</td>
+            <td><span class="pending">[ PENDING &mdash; WS4 &middot; D: element selected, R<sub>ON</sub> position in the gain expression, all-switches-open behaviour ]</span></td>
+            <td>Digital System Design &mdash; the select lines must not move during a measurement</td>
+            <td class="lvl">Applied</td><td>6</td>
+          </tr>
+          <tr>
+            <td class="dc">DC-05</td><td>Resistor tolerance grade (1 % vs 5 %)</td><td>FR3</td>
+            <td>Analog Electronic Circuits &mdash; worst-case / tolerance stack-up analysis</td>
+            <td><span class="pending">[ PENDING &mdash; WS4 gain-error budget against the &plusmn;5 % target ]</span></td>
+            <td>&mdash;</td>
+            <td class="lvl">Applied</td><td>6</td>
+          </tr>
+          <tr>
+            <td class="dc">DC-06</td><td>Gain-code map, default code and break-before-make sequencing</td><td>FR2, FR6</td>
+            <td>Digital System Design &mdash; combinational decoding, finite state machines, synchronous design</td>
+            <td>2-bit code S1 S0; safe transition sequence enforced in hardware so the feedback resistor is never re-routed mid-sample</td>
+            <td>Analog Electronic Circuits &mdash; a mid-measurement change re-routes R<sub>F</sub> inside the feedback path</td>
+            <td class="lvl">Applied</td><td>6, 8</td>
+          </tr>
+          <tr>
+            <td class="dc">DC-07</td><td>Use the on-chip XADC (12-bit, 0&ndash;3.3 V) as the acquisition target</td><td>FR1</td>
+            <td>Signals &amp; Systems &mdash; dynamic range and ADC resolution</td>
+            <td>Target swing up to 1 V inside a 0&ndash;3.3 V, 12-bit input; gain chosen so the conditioned signal uses the range at both load extremes</td>
+            <td>Microcontrollers &amp; Embedded Systems &mdash; reading and sampling an on-chip ADC</td>
+            <td class="lvl">Applied</td><td>2, 6</td>
+          </tr>
+          <tr>
+            <td class="dc">DC-08</td><td>INA126 as the pre-amplifier</td><td>FR1</td>
+            <td>Linear Integrated Circuits &mdash; instrumentation amplifier, CMRR and bridge signal conditioning</td>
+            <td>0&ndash;5 mV bridge output &rarr; &asymp;48&ndash;760 mV; high input impedance and high CMRR</td>
+            <td>Analog Electronic Circuits &mdash; biasing and small-signal model of the following stage</td>
+            <td class="lvl">Applied</td><td>5</td>
+          </tr>
+          <tr>
+            <td class="dc">DC-09</td><td>Settling-time budget for a gain change</td><td>FR4</td>
+            <td>Signals &amp; Systems &mdash; time constants and settling</td>
+            <td><span class="pending">[ PENDING &mdash; WS6 &middot; D.2: dwell + t<sub>ON</sub> + &Delta;V/SR + 4.6&tau; against the 1 % in &le; 50 &micro;s target ]</span></td>
+            <td>Linear Integrated Circuits &mdash; GBW sets &tau; at the new gain</td>
+            <td class="lvl">Applied &rarr; Verified (after scope capture)</td><td>8</td>
+          </tr>
+        </table></div></div>
+    </div>
+
+    <div class="field">
+      <div class="fhead"><span class="fnum">03</span><span class="flabel">Course coverage strip</span></div>
+      <div class="fval">
+        <p>Count of decision cards per core ECE foundation course:</p>
+        <table>
+          <tr><th>Course</th><th>Cards</th><th>Cards at "Verified" level</th></tr>
+          <tr><td>Analog Electronic Circuits (AEC)</td><td>4 (DC-01, DC-02, DC-04, DC-05)</td><td><span class="pending">[ PENDING bench ]</span></td></tr>
+          <tr><td>Linear Integrated Circuits (LIC)</td><td>4 (DC-03, DC-04, DC-08, DC-09)</td><td><span class="pending">[ PENDING bench ]</span></td></tr>
+          <tr><td>Signals &amp; Systems</td><td>3 (DC-01, DC-03, DC-07, DC-09)</td><td><span class="pending">[ PENDING bench ]</span></td></tr>
+          <tr><td>Digital System Design (DSD)</td><td>2 (DC-04, DC-06)</td><td><span class="pending">[ PENDING RTL + bench ]</span></td></tr>
+          <tr><td>Microcontrollers &amp; Embedded Systems</td><td>1 (DC-07)</td><td><span class="pending">[ PENDING ]</span></td></tr>
+          <tr><td>Network Analysis</td><td>1 (DC-02)</td><td><span class="pending">[ PENDING ]</span></td></tr>
+          <tr><td>Communication Systems</td><td>0</td><td>&mdash;</td></tr>
+        </table>
+        <p><b>Under-represented courses and why:</b> <span class="pending">[ PENDING &mdash; the team must state this before the final review. Draft position: Communication Systems has no modulated signal in this artefact &mdash; the signal is DC/slowly varying &mdash; so its concepts appear only through noise and distortion (THD/SNR) measured on page 9; Network Analysis appears through source impedance and loading. Confirm or correct before the final review. ]</span></p></div>
+    </div>
+
+    <p class="evidence">Supporting evidence &mdash; each card lives on the page of the step where the decision happened (pages 5, 6 and 8); bench captures move cards from Applied to Verified. <span class="pending">[ PENDING ]</span></p>
+  </div></div><nav class="page-nav" aria-label="Page navigation"><a href="06-design-and-calculations.html">← Previous</a><a href="08-build-and-verification.html">Next: Build and Verification →</a></nav><footer class="site-footer">KLE Technological University · Electronics and Communication Engineering<br>FPGA-Controlled Variable Gain Amplifier · Team 01 · Academic Year 2026–27</footer></main></div><script src="site.js" defer></script></body></html>

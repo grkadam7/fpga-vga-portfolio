@@ -1,0 +1,134 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#10243c"><meta name="description" content="KLE Technological University ECE mini project portfolio — System Architecture"><title>System Architecture · ECE Engineering Portfolio</title><style>
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: Arial, "Segoe UI", sans-serif; font-size:15px;
+         color:#253149; background:#fff; line-height:1.55; }
+  .banner { background:linear-gradient(135deg,#2a1152 0%,#3d1466 55%,#554181 100%);
+            color:#fff; padding:16px 26px; }
+  .banner .eyebrow { font-size:11px; letter-spacing:2px; text-transform:uppercase;
+            opacity:.82; margin:0 0 4px; }
+  .banner .proj { font-family:Georgia,serif; font-size:15px; font-weight:400; margin:0; }
+  .wrap { max-width:980px; margin:0 auto; padding:30px 30px 40px; }
+  .crumb { font-size:11px; letter-spacing:1.5px; text-transform:uppercase;
+            color:#8a8199; margin:0 0 6px; }
+  h1.title { font-family:Georgia,serif; font-size:38px; font-weight:400; color:#291354;
+            letter-spacing:-1px; margin:0 0 6px; line-height:1.1; }
+  .sub { font-size:15px; color:#5a5570; margin:0 0 6px; }
+  .meta { font-size:12px; color:#8a8199; margin:0 0 14px; }
+  .progress { font-size:13px; color:#7a6ba6; margin:0 0 4px; }
+  .record { border:1px solid #e5dff3; border-radius:12px; padding:6px 34px; margin:0 0 22px;
+            box-shadow:0 13px 35px rgba(98,0,79,.08); }
+  .rec-label { font-size:11px; letter-spacing:1.5px; text-transform:uppercase; color:#7a6ba6;
+            padding:22px 0 6px; }
+  .field { padding:20px 0; border-bottom:1px solid #efeaf9; }
+  .field:last-child { border-bottom:none; }
+  .fhead { display:flex; align-items:baseline; gap:14px; margin-bottom:8px; }
+  .fnum { font-family:Georgia,serif; font-size:26px; color:#a99bd0; line-height:1; }
+  .flabel { font-size:16px; font-weight:600; color:#340b67; }
+  .fval { padding-left:40px; }
+  .fval ol, .fval ul { margin:0; padding-left:20px; }
+  .fval li { margin:0 0 4px; }
+  .fval p { margin:0 0 8px; }
+  .fval b, .fval strong { color:#291354; }
+  .fval table { border-collapse:collapse; width:100%; margin:6px 0 4px; font-size:13.5px; }
+  .fval th, .fval td { border:1px solid #e5dff3; padding:7px 11px; text-align:left; vertical-align:top; }
+  .fval th { background:#f6f3fc; font-weight:600; color:#340b67; }
+  .fval tr:nth-child(even) td { background:#fbfaff; }
+  .fval sub { font-size:11px; }
+  .fval .placeholder { color:#6b6480; background:#f8f6fd; border:1px dashed #cfc4e8;
+            border-radius:8px; padding:12px 16px; font-size:13.5px; }
+  .pending { color:#9a5b00; background:#fff7e6; border:1px dashed #e6c98a; border-radius:5px;
+            padding:0 6px; font-size:13px; }
+  .evidence { font-size:14px; color:#6b6480; padding:18px 0 22px; }
+  .footer { max-width:980px; margin:0 auto; padding:0 30px 30px; font-size:12px; color:#8a8199; }
+</style><link rel="stylesheet" href="styles.css"></head><body><a class="skip" href="#main">Skip to content</a><header class="topbar"><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open portfolio navigation">☰</button><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">KLE</span><span><span class="brand-name">KLE Technological University</span><span class="brand-campus">B. V. Bhoomaraddi Campus, Hubballi</span></span></a><span class="bar-divider"></span><div class="bar-meta"><div class="bar-context">Engineering portfolio</div><div class="bar-year">Foundation Integration · 2026–27</div></div><div class="bar-actions"><span class="bar-pill">● Public view</span><button class="print-button" type="button" onclick="window.print()" aria-label="Print current page">⎙</button></div></header><div class="mobile-backdrop" aria-hidden="true"></div><div class="app-shell"><aside class="sidebar" id="site-nav"><div class="project-code">T01 / A01</div><h2 class="project-title">FPGA-controlled<br>Variable Gain Amplifier</h2><p class="project-tags">Analog × Digital × Evidence</p><div class="nav-heading">Project portfolio / 16-step record</div><nav class="nav-list" aria-label="Portfolio pages"><a class="nav-link" href="index.html"><span class="nav-index">⌂</span><span>Project Overview</span></a><a class="nav-link" href="01-team-and-roles.html"><span class="nav-index">01</span><span>Team and roles</span></a><a class="nav-link" href="02-problem-and-need.html"><span class="nav-index">02</span><span>Problem Definition and Need Identification</span></a><a class="nav-link" href="03-concept-choices.html"><span class="nav-index">03</span><span>Concept Choices</span></a><a class="nav-link" href="04-functional-requirements.html"><span class="nav-index">04</span><span>Functional Requirements</span></a><a class="nav-link" href="05-architecture-and-subsystems.html" aria-current="page"><span class="nav-index">05</span><span>System Architecture</span></a><a class="nav-link" href="06-design-and-calculations.html"><span class="nav-index">06</span><span>Design and Calculations</span></a><a class="nav-link" href="07-foundation-integration-map.html"><span class="nav-index">07</span><span>Foundation Integration Map</span></a><a class="nav-link" href="08-build-and-verification.html"><span class="nav-index">08</span><span>Build and Verification</span></a><a class="nav-link" href="09-predicted-vs-measured.html"><span class="nav-index">09</span><span>Predicted vs Measured</span></a><a class="nav-link" href="10-failures-and-fixes.html"><span class="nav-index">10</span><span>Failures and Fixes</span></a><a class="nav-link" href="11-engineering-notebook.html"><span class="nav-index">11</span><span>Engineering Notebook</span></a><a class="nav-link" href="12-review-record.html"><span class="nav-index">12</span><span>Review Record</span></a><a class="nav-link" href="13-reflections-and-forward-links.html"><span class="nav-index">13</span><span>Reflections and Forward Links</span></a><a class="nav-link" href="14-final-demonstration.html"><span class="nav-index">14</span><span>Final Demonstration</span></a><a class="nav-link" href="15-project-files.html"><span class="nav-index">15</span><span>Project Files and References</span></a></nav></aside><main class="main-area" id="main"><p class="crumb">Theme 1 <span>›</span> Programmable Analog Gain Systems <span>›</span> System Architecture</p><header class="hero"><p class="eyebrow">PORTFOLIO PAGE 05 · FOUNDATION INTEGRATION</p><h1>System Architecture</h1><p class="subtitle">Document the blocks, their interfaces and the control path. Sprint 1 — Gate 2 Preparation</p><div class="hero-chips"><span class="hero-chip">Page 05 of 15</span><span class="hero-chip">5 content blocks</span><span class="hero-chip">Source-linked design</span></div></header><div class="legacy-content"><p class="meta">Page 5 &middot; due Review 3 &middot; source worksheets WS1, WS3, WS6, WS9 &middot; last updated 2026-10-26</p>
+  
+
+  <div class="record">
+    <p class="rec-label">Documented engineering record</p>
+
+    <div class="field">
+      <div class="fhead"><span class="fnum">01</span><span class="flabel">Block diagram</span></div>
+      <div class="fval"><p class="placeholder">[ PLACEHOLDER &mdash; upload the block diagram (analog path
+        left &rarr; right, digital path meeting it at the gain-selection block). Worksheet 1 &middot; A.4 sketch
+        goes here first; the as-built redraw from WS9 &middot; A.1 replaces it at the final review, with changed
+        blocks circled. ]</p></div>
+    </div>
+
+    <div class="field">
+      <div class="fhead"><span class="fnum">02</span><span class="flabel">Blocks, interfaces and governing FR</span></div>
+      <div class="fval">
+        <table>
+          <tr><th>#</th><th>Block</th><th>Signal IN (type / range)</th><th>Signal OUT (type / range)</th><th>Governing FR</th></tr>
+          <tr><td>1</td><td>Load cell (5 kg, 4-wire strain gauge)</td><td>Load 0&ndash;5 kg</td><td>Differential 0&ndash;5 mV</td><td>FR1</td></tr>
+          <tr><td>2</td><td>Pre-amplifier &mdash; INA126 instrumentation amplifier</td><td>Differential 0&ndash;5 mV</td><td>&asymp;48 mV to &asymp;760 mV</td><td>FR1</td></tr>
+          <tr><td>3</td><td>Variable gain stage &mdash; NE5532 non-inverting + switched R<sub>F</sub> network</td><td>&asymp;48&ndash;760 mV</td><td>up to &asymp;1 V (within XADC range)</td><td>FR1, FR2, FR3</td></tr>
+          <tr><td>4</td><td>Gain-selection switch &mdash; CD4052 analog multiplexer</td><td>S1 S0 (3.3 V CMOS) + four R<sub>F</sub> legs</td><td>Selected feedback resistor</td><td>FR2, FR6</td></tr>
+          <tr><td>5</td><td>Acquisition &mdash; Arty A7 XADC (12-bit, 0&ndash;3.3 V)</td><td>Analog, 0&ndash;1 V target swing</td><td>Digital code</td><td>FR1</td></tr>
+          <tr><td>6</td><td>Gain-control logic &mdash; Artix-7 FPGA</td><td>XADC reading / command</td><td>S1 S0 (3.3 V CMOS)</td><td>FR2, FR6</td></tr>
+        </table></div>
+    </div>
+
+    <div class="field">
+      <div class="fhead"><span class="fnum">03</span><span class="flabel">Digital control path</span></div>
+      <div class="fval">
+        <table>
+          <tr><th>#</th><th>Block</th><th>Function</th></tr>
+          <tr><td>1</td><td>Gain-decision logic (FPGA)</td><td>Maps the measured level (or command) to the required gain code</td></tr>
+          <tr><td>2</td><td>Code register / sequencing (break-before-make, dwell)</td><td>Holds S1 S0 stable, forces a safe transition between codes</td></tr>
+          <tr><td>3</td><td>S1 S0 output pins (3.3 V CMOS)</td><td>Drives the CD4052 select inputs</td></tr>
+          <tr><td>4</td><td>CD4052 select inputs</td><td>Physically re-routes the feedback resistor &rarr; the point where digital meets analog</td></tr>
+        </table>
+        <p><b>Where analog meets digital:</b> the CD4052 select inputs (WS1 &middot; A.3).
+        <b>Component that makes it possible:</b> analog multiplexer &mdash; first guess recorded before research in
+        WS1 &middot; A.3 <span class="pending">[ PENDING &mdash; quote the team's original answer ]</span>.</p></div>
+    </div>
+
+    <div class="field">
+      <div class="fhead"><span class="fnum">04</span><span class="flabel">Subsystem alternatives and selection</span></div>
+      <div class="fval">
+        <table>
+          <tr><th>Subsystem</th><th>Alternatives</th><th>Selected</th><th>Reason</th></tr>
+          <tr>
+            <td>Pre-amplifier</td>
+            <td>Instrumentation amplifier IC / three-op-amp discrete instrumentation stage / single op-amp difference amplifier</td>
+            <td>INA126 instrumentation amplifier</td>
+            <td>High input impedance and high CMRR for bridge sensors; low noise for small load-cell signals</td>
+          </tr>
+          <tr>
+            <td>Variable gain stage</td>
+            <td>Switched feedback resistors via analog mux / digital potentiometer / dedicated PGA IC</td>
+            <td>Op-amp + CD4052-switched feedback resistors</td>
+            <td>See page 3 (Concept Choices) comparison matrix</td>
+          </tr>
+          <tr>
+            <td>Amplifier configuration</td>
+            <td>Inverting / non-inverting / differential / instrumentation</td>
+            <td>Non-inverting (A<sub>v</sub> = 1 + R<sub>F</sub>/R<sub>in</sub>)</td>
+            <td><span class="pending">[ PENDING &mdash; WS3 &middot; C.2 justification: input impedance, gain equation simplicity, no sign inversion ]</span></td>
+          </tr>
+          <tr>
+            <td>Acquisition</td>
+            <td>On-chip XADC / external SPI ADC + MCU</td>
+            <td>Arty A7 XADC (12-bit, 0&ndash;3.3 V)</td>
+            <td>Already on the assigned board; sufficient resolution for the conditioned range</td>
+          </tr>
+          <tr>
+            <td>Controller</td>
+            <td>Artix-7 FPGA / microcontroller</td>
+            <td>Artix-7 FPGA</td>
+            <td>Artefact requirement &mdash; gain code generated in hardware from the XADC reading</td>
+          </tr>
+        </table></div>
+    </div>
+
+    <div class="field">
+      <div class="fhead"><span class="fnum">05</span><span class="flabel">Interfaces that must be specified before build</span></div>
+      <div class="fval"><ul>
+        <li>Control logic level: 3.3 V CMOS from the Arty A7 vs CD4052 V<sub>DD</sub> &mdash; <span class="pending">[ PENDING: confirm the CD4052 supply and level compatibility, WS2 &middot; B.3 ]</span>.</li>
+        <li>Common ground between the FPGA board and the analog board: single-point connection (WS6 &middot; B).</li>
+        <li>Test points TP on the pre-amp output, VGA output and each control line (WS2 &middot; D.2).</li>
+      </ul></div>
+    </div>
+
+    <p class="evidence">Supporting evidence &mdash; block-diagram sketch (WS1 &middot; A.4) and the as-built redraw (WS9 &middot; A.1) to be linked here. <span class="pending">[ PENDING ]</span></p>
+  </div></div><nav class="page-nav" aria-label="Page navigation"><a href="04-functional-requirements.html">← Previous</a><a href="06-design-and-calculations.html">Next: Design and Calculations →</a></nav><footer class="site-footer">KLE Technological University · Electronics and Communication Engineering<br>FPGA-Controlled Variable Gain Amplifier · Team 01 · Academic Year 2026–27</footer></main></div><script src="site.js" defer></script></body></html>

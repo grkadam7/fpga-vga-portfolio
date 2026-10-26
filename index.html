@@ -1,0 +1,132 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#10243c"><meta name="description" content="KLE Technological University ECE mini project portfolio — FPGA-Controlled Variable Gain Amplifier"><title>FPGA-Controlled Variable Gain Amplifier · ECE Engineering Portfolio</title><style>
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: Arial, "Segoe UI", sans-serif; font-size:15px;
+         color:#253149; background:#fff; line-height:1.55; }
+  .banner { background:linear-gradient(135deg,#2a1152 0%,#3d1466 55%,#554181 100%);
+            color:#fff; padding:16px 26px; }
+  .banner .eyebrow { font-size:11px; letter-spacing:2px; text-transform:uppercase;
+            opacity:.82; margin:0 0 4px; }
+  .banner .proj { font-family:Georgia,serif; font-size:15px; font-weight:400; margin:0; }
+  .wrap { max-width:980px; margin:0 auto; padding:30px 30px 40px; }
+  .hero-eyebrow { font-size:11px; letter-spacing:2px; text-transform:uppercase;
+            color:#7a6ba6; margin:0 0 8px; }
+  h1.title { font-family:Georgia,serif; font-size:38px; font-weight:400; color:#291354;
+            letter-spacing:-1px; margin:0 0 10px; line-height:1.1; }
+  .lede { font-size:15px; color:#5a5570; margin:0 0 24px; }
+  .lede b { color:#291354; }
+  .stats { display:flex; flex-wrap:wrap; gap:14px; margin:0 0 34px; }
+  .stat { flex:1; min-width:200px; border:1px solid #e5dff3; border-radius:12px; padding:18px 22px;
+            background:linear-gradient(180deg,#faf8ff 0%,#f4f0fc 100%); }
+  .stat .lbl { font-size:10.5px; letter-spacing:1.5px; text-transform:uppercase; color:#7a6ba6; margin:0 0 6px; }
+  .stat .num { font-family:Georgia,serif; font-size:32px; font-weight:400; color:#340b67; line-height:1; }
+  .stat .cap { font-size:12px; color:#8a8199; margin-top:7px; }
+  h2.section { font-family:Georgia,serif; font-size:27px; font-weight:400; color:#340b67; margin:0 0 4px; }
+  .section-sub { font-size:13.5px; color:#6b6480; margin:0 0 18px; }
+  .grid { display:flex; flex-wrap:wrap; gap:14px; }
+  .card { flex:1 1 280px; border:1px solid #e5dff3; border-radius:12px; padding:20px 22px;
+            box-shadow:0 13px 35px rgba(98,0,79,.08); background:#fff;
+            display:block; text-decoration:none; transition:border-color .15s, transform .15s; }
+  .card:hover { border-color:#a99bd0; transform:translateY(-2px); }
+  .card .cnum { font-family:Georgia,serif; font-size:26px; color:#a99bd0; line-height:1; }
+  .card .ctitle { font-family:Georgia,serif; font-size:17px; font-weight:400; color:#340b67;
+            margin:6px 0 8px; line-height:1.25; }
+  .card .gate { display:inline-block; font-size:10px; letter-spacing:1.2px; text-transform:uppercase;
+            color:#7a6ba6; background:#f1edfa; border:1px solid #e5dff3; border-radius:5px;
+            padding:3px 8px; margin:0 0 8px; }
+  .card .cnt { font-size:12px; color:#8a8199; margin:0; }
+  .footer { max-width:980px; margin:0 auto; padding:0 30px 30px; font-size:12px; color:#8a8199; }
+</style><link rel="stylesheet" href="styles.css"></head><body><a class="skip" href="#main">Skip to content</a><header class="topbar"><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open portfolio navigation">☰</button><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">KLE</span><span><span class="brand-name">KLE Technological University</span><span class="brand-campus">B. V. Bhoomaraddi Campus, Hubballi</span></span></a><span class="bar-divider"></span><div class="bar-meta"><div class="bar-context">Engineering portfolio</div><div class="bar-year">Foundation Integration · 2026–27</div></div><div class="bar-actions"><span class="bar-pill">● Public view</span><button class="print-button" type="button" onclick="window.print()" aria-label="Print current page">⎙</button></div></header><div class="mobile-backdrop" aria-hidden="true"></div><div class="app-shell"><aside class="sidebar" id="site-nav"><div class="project-code">T01 / A01</div><h2 class="project-title">FPGA-controlled<br>Variable Gain Amplifier</h2><p class="project-tags">Analog × Digital × Evidence</p><div class="nav-heading">Project portfolio / 16-step record</div><nav class="nav-list" aria-label="Portfolio pages"><a class="nav-link" href="index.html" aria-current="page"><span class="nav-index">⌂</span><span>Project Overview</span></a><a class="nav-link" href="01-team-and-roles.html"><span class="nav-index">01</span><span>Team and roles</span></a><a class="nav-link" href="02-problem-and-need.html"><span class="nav-index">02</span><span>Problem Definition and Need Identification</span></a><a class="nav-link" href="03-concept-choices.html"><span class="nav-index">03</span><span>Concept Choices</span></a><a class="nav-link" href="04-functional-requirements.html"><span class="nav-index">04</span><span>Functional Requirements</span></a><a class="nav-link" href="05-architecture-and-subsystems.html"><span class="nav-index">05</span><span>System Architecture</span></a><a class="nav-link" href="06-design-and-calculations.html"><span class="nav-index">06</span><span>Design and Calculations</span></a><a class="nav-link" href="07-foundation-integration-map.html"><span class="nav-index">07</span><span>Foundation Integration Map</span></a><a class="nav-link" href="08-build-and-verification.html"><span class="nav-index">08</span><span>Build and Verification</span></a><a class="nav-link" href="09-predicted-vs-measured.html"><span class="nav-index">09</span><span>Predicted vs Measured</span></a><a class="nav-link" href="10-failures-and-fixes.html"><span class="nav-index">10</span><span>Failures and Fixes</span></a><a class="nav-link" href="11-engineering-notebook.html"><span class="nav-index">11</span><span>Engineering Notebook</span></a><a class="nav-link" href="12-review-record.html"><span class="nav-index">12</span><span>Review Record</span></a><a class="nav-link" href="13-reflections-and-forward-links.html"><span class="nav-index">13</span><span>Reflections and Forward Links</span></a><a class="nav-link" href="14-final-demonstration.html"><span class="nav-index">14</span><span>Final Demonstration</span></a><a class="nav-link" href="15-project-files.html"><span class="nav-index">15</span><span>Project Files and References</span></a></nav></aside><main class="main-area" id="main"><p class="crumb">Theme 1 <span>›</span> Programmable Analog Gain Systems <span>›</span> FPGA-Controlled Variable Gain Amplifier</p><header class="hero"><p class="eyebrow">PROJECT OVERVIEW · FOUNDATION INTEGRATION</p><h1>FPGA-Controlled Variable Gain Amplifier</h1><p class="subtitle">Team 01 · An engineering story from identified need through requirements, architecture, implementation and validation. Every stage is supported by team entries and recorded evidence.</p><div class="hero-chips"><span class="hero-chip">Home + 15 project records</span><span class="hero-chip">Source-linked design</span></div></header><div class="legacy-content"><div class="content-card home-facts"><div><strong>16</strong><span>portfolio records</span></div><div><strong>4</strong><span>selectable gain settings</span></div><div><strong>9</strong><span>weekly worksheets</span></div></div><h2 class="section">Engineering design journey</h2>
+  
+
+  <div class="grid">
+    <a class="card" href="01-team-and-roles.html">
+      <div class="cnum">01</div>
+      <div class="ctitle">Team and Roles</div>
+      <span class="gate">Team record</span>
+      
+    </a>
+    <a class="card" href="02-problem-and-need.html">
+      <div class="cnum">02</div>
+      <div class="ctitle">Problem Definition and Need Identification</div>
+      <span class="gate">Gate 0 &mdash; Problem Approval</span>
+      
+    </a>
+    <a class="card" href="03-concept-choices.html">
+      <div class="cnum">03</div>
+      <div class="ctitle">Concept Choices</div>
+      <span class="gate">Gate 1 &mdash; Requirements Baseline</span>
+      
+    </a>
+    <a class="card" href="04-functional-requirements.html">
+      <div class="cnum">04</div>
+      <div class="ctitle">Functional Requirements</div>
+      <span class="gate">Gate 1 &mdash; Requirements Baseline</span>
+      
+    </a>
+    <a class="card" href="05-architecture-and-subsystems.html">
+      <div class="cnum">05</div>
+      <div class="ctitle">System Architecture</div>
+      <span class="gate">Sprint 1 &mdash; Gate 2 Preparation</span>
+      
+    </a>
+    <a class="card" href="06-design-and-calculations.html">
+      <div class="cnum">06</div>
+      <div class="ctitle">Design and Calculations</div>
+      <span class="gate">Sprint 1 &mdash; Detailed Design</span>
+      
+    </a>
+    <a class="card" href="07-foundation-integration-map.html">
+      <div class="cnum">07</div>
+      <div class="ctitle">Foundation Integration Map</div>
+      <span class="gate">Foundation Integration</span>
+      
+    </a>
+    <a class="card" href="08-build-and-verification.html">
+      <div class="cnum">08</div>
+      <div class="ctitle">Build and Verification</div>
+      <span class="gate">Sprint 1 &mdash; Initial Implementation</span>
+      
+    </a>
+    <a class="card" href="09-predicted-vs-measured.html">
+      <div class="cnum">09</div>
+      <div class="ctitle">Predicted vs Measured</div>
+      <span class="gate">Sprint 1 &mdash; Testing and Validation</span>
+      
+    </a>
+    <a class="card" href="10-failures-and-fixes.html">
+      <div class="cnum">10</div>
+      <div class="ctitle">Failures and Fixes</div>
+      <span class="gate">Sprint 1 &mdash; Failures and Learning</span>
+      
+    </a>
+    <a class="card" href="11-engineering-notebook.html">
+      <div class="cnum">11</div>
+      <div class="ctitle">Engineering Notebook</div>
+      <span class="gate">Individual Learning</span>
+      
+    </a>
+    <a class="card" href="12-review-record.html">
+      <div class="cnum">12</div>
+      <div class="ctitle">Review Record</div>
+      <span class="gate">Reviews and Responses</span>
+      
+    </a>
+    <a class="card" href="13-reflections-and-forward-links.html">
+      <div class="cnum">13</div>
+      <div class="ctitle">Reflections and Forward Links</div>
+      <span class="gate">Documented Improvement</span>
+      
+    </a>
+    <a class="card" href="14-final-demonstration.html">
+      <div class="cnum">14</div>
+      <div class="ctitle">Final Demonstration</div>
+      <span class="gate">Final Synthesis</span>
+      
+    </a>
+    <a class="card" href="15-project-files.html">
+      <div class="cnum">15</div>
+      <div class="ctitle">Project Files</div>
+      <span class="gate">Technical Evidence Repository</span>
+      
+    </a>
+  </div></div><footer class="site-footer">KLE Technological University · Electronics and Communication Engineering<br>FPGA-Controlled Variable Gain Amplifier · Team 01 · Academic Year 2026–27</footer></main></div><script src="site.js" defer></script></body></html>
