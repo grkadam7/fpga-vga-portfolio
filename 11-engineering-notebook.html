@@ -104,7 +104,7 @@
         <table>
           <tr><th>Field</th><th>Entry</th></tr>
           <tr><td>Objective</td><td>Verify the four gain settings and the clipping behaviour before building.</td></tr>
-          <tr><td>Decision / calculation</td><td>LTspice model: load cell &rarr; INA126 &rarr; NE5532 VGA with CD4052-switched R<sub>F</sub> &rarr; 3.3 V ADC limit; input 10 mV<sub>pp</sub>; supply &plusmn;5 V.</td></tr>
+          <tr><td>Decision / calculation</td><td>LTspice model: load cell &rarr; INA126 &rarr; NE5532 VGA with CD4052-switched R<sub>F</sub> &rarr; 1 V ADC limit; input 10 mV<sub>pp</sub>; supply &plusmn;5 V.</td></tr>
           <tr><td>Course used</td><td>Analog Electronic Circuits (feedback, clipping); Digital System Design (code-to-channel mapping).</td></tr>
           <tr><td>Learning</td><td>Simulated gains 1.9 / 3.1 / 5.6 / 10.8 vs theory 2.0 / 3.2 / 5.7 / 11.0 &mdash; every code reads low by 1.8&ndash;5 %; a systematic offset, not a per-setting error.</td></tr>
           <tr><td>Next action</td><td>Bench-measure the same four codes and compare with simulation (Worksheet 6).</td></tr>

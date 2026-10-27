@@ -60,10 +60,10 @@
           <tr><td>Load range</td><td>0 to 5</td><td>kg</td><td>Datasheet &mdash; 5 kg 4-wire strain-gauge load cell</td></tr>
           <tr><td>Sensor output</td><td>0 to 5</td><td>mV</td><td>Datasheet / measured during load-cell characterisation</td></tr>
           <tr><td>Pre-amplifier output (INA126)</td><td>&asymp;48 to &asymp;760</td><td>mV</td><td>Calculated from the pre-amp gain &mdash; <span class="pending">[ PENDING: gain calculation card on page 6 ]</span></td></tr>
-          <tr><td>Target output swing</td><td>up to 1 (within XADC input range)</td><td>V</td><td>Design target &mdash; Arty A7 XADC single-ended input, 0&ndash;3.3 V</td></tr>
-          <tr><td>ADC</td><td>12-bit, 0&ndash;3.3</td><td>bit, V</td><td>Datasheet &mdash; Artix-7 XADC user guide</td></tr>
+          <tr><td>Target output swing</td><td>1</td><td>V</td><td>Design target &mdash; Nexys A7 XADC input, 0&ndash;1 V</td></tr>
+          <tr><td>ADC</td><td>12, 0&ndash;1</td><td>bit, V</td><td>Datasheet &mdash; Artix-7 XADC user guide</td></tr>
           <tr><td>Signal bandwidth</td><td>DC or slowly varying</td><td>Hz</td><td>Application &mdash; conveyor-belt weight measurement</td></tr>
-          <tr><td>Supplies</td><td>5 and 3.3</td><td>V</td><td>Assumed &mdash; bench supply and Arty A7 rail</td></tr>
+          <tr><td>Supplies</td><td>5 and 3.3</td><td>V</td><td>Assumed &mdash; bench supply and Nexys A7 rail</td></tr>
           <tr><td>Load on output</td><td><span class="pending">[ PENDING &mdash; state R_load and C_load ]</span></td><td>&mdash;</td><td>&mdash;</td></tr>
           <tr><td>Source impedance</td><td><span class="pending">[ PENDING &mdash; WS1 &middot; B.3, cite the source ]</span></td><td>&Omega;</td><td>&mdash;</td></tr>
         </table></div>
@@ -81,7 +81,7 @@
       <div class="fval">
         <table>
           <tr><th>Source</th><th>What we learned from it</th></tr>
-          <tr><td>Artix-7 XADC user guide</td><td>On-chip 12-bit ADC, input range 0&ndash;3.3 V, suitable for sensor signal acquisition.</td></tr>
+          <tr><td>Artix-7 XADC user guide</td><td>On-chip 12-bit ADC, input range 0&ndash;1 V, suitable for sensor signal acquisition.</td></tr>
           <tr><td>CD4052 datasheet</td><td>Dual 4-channel analog multiplexer; selection of multiple feedback resistors to obtain different gain levels, controlled by digital select lines.</td></tr>
           <tr><td>INA126 datasheet</td><td>High input impedance, high CMRR &mdash; suited to bridge sensors such as load cells.</td></tr>
           <tr><td>Op-amp application notes</td><td>An op-amp VGA with switched feedback resistors is simple, reliable and widely used for sensor signal conditioning.</td></tr>

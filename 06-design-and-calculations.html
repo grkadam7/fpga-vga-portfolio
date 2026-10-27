@@ -64,7 +64,7 @@
               <tr><th>R<sub>F</sub></th><td>1 k&Omega;</td><td>2.2 k&Omega;</td><td>4.7 k&Omega;</td><td>10 k&Omega;</td></tr>
               <tr><th>Theoretical gain</th><td>&times;2</td><td>&times;3.2</td><td>&times;5.7</td><td>&times;11</td></tr>
             </table></td></tr>
-          <tr><td>Margin</td><td>With pre-amp output &asymp;48 mV to &asymp;760 mV: &times;11 on 48 mV &rarr; &asymp;0.53 V; &times;2 on 760 mV &rarr; &asymp;1.52 V &mdash; inside the XADC 0&ndash;3.3 V input range at both extremes.</td></tr>
+          <tr><td>Margin</td><td>With pre-amp output &asymp;48 mV to &asymp;760 mV: &times;11 on 48 mV &rarr; &asymp;0.53 V; &times;2 on 760 mV &rarr; &asymp;1.52 V &mdash; low extreme inside the 0&ndash;1 V XADC range, high extreme within the gain table's 2 V design max.</td></tr>
           <tr><td>Predicted (dated)</td><td>Theoretical &times;2.0, &times;3.2, &times;5.7, &times;11.0 &mdash; recorded before simulation and build.</td></tr>
           <tr><td>Learning</td><td><span class="pending">[ PENDING &mdash; after the bench measurement ]</span></td></tr>
         </table>
@@ -131,7 +131,7 @@
           <tr><td>INA126</td><td>Pre-amplifier</td><td>High input impedance, high CMRR, low noise &mdash; suited to bridge sensors</td></tr>
           <tr><td>NE5532</td><td>Gain-stage op-amp</td><td><span class="pending">[ PENDING &mdash; justify from the WS3 &middot; B.2 comparison table: GBW, slew rate, offset, noise, supply rails, cost ]</span></td></tr>
           <tr><td>CD4052</td><td>Analog multiplexer</td><td>Dual 4-channel mux selects one of four feedback resistors under S1 S0 control</td></tr>
-          <tr><td>Arty A7 (Artix-7)</td><td>Controller + ADC</td><td>On-chip 12-bit XADC, 0&ndash;3.3 V; generates S0/S1</td></tr>
+          <tr><td>Nexys A7 (Artix-7)</td><td>Controller + ADC</td><td>On-chip 12-bit XADC, 0&ndash;1 V; generates S0/S1</td></tr>
           <tr><td>Resistors and capacitors</td><td>Gain network, decoupling</td><td>Per gain and decoupling calculations &mdash; <span class="pending">[ PENDING: tolerance grade + reason ]</span></td></tr>
         </table></div>
     </div>

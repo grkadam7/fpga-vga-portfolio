@@ -53,7 +53,7 @@
     <div class="field">
       <div class="fhead"><span class="fnum">01</span><span class="flabel">Simulation &mdash; LTspice model of the complete circuit</span></div>
       <div class="fval">
-        <p><b>Conditions:</b> supply &plusmn;5 V (op-amp), 0&ndash;3.3 V at the XADC input (Artix-7 modelled as a 3.3 V input
+        <p><b>Conditions:</b> supply &plusmn;5 V (op-amp), 0&ndash;1 V at the XADC input (Artix-7 modelled as a 1 V input
         limit), input 10 mV<sub>pp</sub> sine wave representative of the conditioned load-cell signal. The model
         includes the load cell as a small differential source, the INA126 pre-amplifier, the op-amp VGA with
         selectable feedback resistors R1&ndash;R4 through the CD4052.</p>
@@ -73,7 +73,7 @@
           <tr><th>Simulation setup item</th><th>Value</th></tr>
           <tr><td>Tool</td><td>LTspice</td></tr>
           <tr><td>Op-amp supply</td><td>&plusmn;5 V</td></tr>
-          <tr><td>ADC model</td><td>3.3 V input limit (Arty A7 XADC)</td></tr>
+          <tr><td>ADC model</td><td>1 V input limit (Nexys A7 XADC)</td></tr>
           <tr><td>Stimulus</td><td>10 mV<sub>pp</sub> sine, <span class="pending">[ PENDING &mdash; state the frequency used ]</span></td></tr>
           <tr><td>Netlist / waveform files</td><td><span class="pending">[ PENDING &mdash; link from page 15 ]</span></td></tr>
         </table></div>
@@ -98,7 +98,7 @@
 
     <div class="field">
       <div class="fhead"><span class="fnum">03</span><span class="flabel">Build photos and videos</span></div>
-      <div class="fval"><p class="placeholder">[ PLACEHOLDER &mdash; upload with captions: breadboard assembly against the schematic, Arty A7 and the
+      <div class="fval"><p class="placeholder">[ PLACEHOLDER &mdash; upload with captions: breadboard assembly against the schematic, Nexys A7 and the
         analog board wired together, single-point ground connection, test points labelled, short video of the
         FPGA stepping through gain codes. ]</p></div>
     </div>

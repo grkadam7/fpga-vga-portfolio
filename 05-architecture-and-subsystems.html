@@ -63,7 +63,7 @@
           <tr><td>2</td><td>Pre-amplifier &mdash; INA126 instrumentation amplifier</td><td>Differential 0&ndash;5 mV</td><td>&asymp;48 mV to &asymp;760 mV</td><td>FR1</td></tr>
           <tr><td>3</td><td>Variable gain stage &mdash; NE5532 non-inverting + switched R<sub>F</sub> network</td><td>&asymp;48&ndash;760 mV</td><td>up to &asymp;1 V (within XADC range)</td><td>FR1, FR2, FR3</td></tr>
           <tr><td>4</td><td>Gain-selection switch &mdash; CD4052 analog multiplexer</td><td>S1 S0 (3.3 V CMOS) + four R<sub>F</sub> legs</td><td>Selected feedback resistor</td><td>FR2, FR6</td></tr>
-          <tr><td>5</td><td>Acquisition &mdash; Arty A7 XADC (12-bit, 0&ndash;3.3 V)</td><td>Analog, 0&ndash;1 V target swing</td><td>Digital code</td><td>FR1</td></tr>
+          <tr><td>5</td><td>Acquisition &mdash; Nexys A7 XADC (12-bit, 0&ndash;1 V)</td><td>Analog, 0&ndash;1 V target swing</td><td>Digital code</td><td>FR1</td></tr>
           <tr><td>6</td><td>Gain-control logic &mdash; Artix-7 FPGA</td><td>XADC reading / command</td><td>S1 S0 (3.3 V CMOS)</td><td>FR2, FR6</td></tr>
         </table></div>
     </div>
@@ -109,7 +109,7 @@
           <tr>
             <td>Acquisition</td>
             <td>On-chip XADC / external SPI ADC + MCU</td>
-            <td>Arty A7 XADC (12-bit, 0&ndash;3.3 V)</td>
+            <td>Nexys A7 XADC (12-bit, 0&ndash;1 V)</td>
             <td>Already on the assigned board; sufficient resolution for the conditioned range</td>
           </tr>
           <tr>
@@ -124,7 +124,7 @@
     <div class="field">
       <div class="fhead"><span class="fnum">05</span><span class="flabel">Interfaces that must be specified before build</span></div>
       <div class="fval"><ul>
-        <li>Control logic level: 3.3 V CMOS from the Arty A7 vs CD4052 V<sub>DD</sub> &mdash; <span class="pending">[ PENDING: confirm the CD4052 supply and level compatibility, WS2 &middot; B.3 ]</span>.</li>
+        <li>Control logic level: 3.3 V CMOS from the Nexys A7 vs CD4052 V<sub>DD</sub> &mdash; <span class="pending">[ PENDING: confirm the CD4052 supply and level compatibility, WS2 &middot; B.3 ]</span>.</li>
         <li>Common ground between the FPGA board and the analog board: single-point connection (WS6 &middot; B).</li>
         <li>Test points TP on the pre-amp output, VGA output and each control line (WS2 &middot; D.2).</li>
       </ul></div>

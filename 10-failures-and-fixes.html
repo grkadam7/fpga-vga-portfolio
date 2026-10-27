@@ -53,7 +53,7 @@
           <tr><th>Field</th><th>Entry</th></tr>
           <tr><td>Symptom</td><td>Output flattens (clipping) in simulation when a high gain code is used with a larger input &mdash; observed side by side with the unclipped case at a lower gain.</td></tr>
           <tr><td>Test performed</td><td>LTspice run of the complete model at the same input with two gain settings; input and output waveforms compared against the XADC input limit.</td></tr>
-          <tr><td>Root cause</td><td>Input amplitude &times; programmed gain exceeded the linear output range / the 3.3 V ADC input limit &mdash; a fixed relationship, not a component fault.</td></tr>
+          <tr><td>Root cause</td><td>Input amplitude &times; programmed gain exceeded the linear output range / the 1 V ADC input limit &mdash; a fixed relationship, not a component fault.</td></tr>
           <tr><td>Correction</td><td>Gain must fall as input rises: the gain-selection rule (switch down before the output clips), which is the reason the artefact is variable-gain at all.</td></tr>
           <tr><td>Re-measured</td><td><span class="pending">[ PENDING &mdash; hardware: raise the input at each code until the clipping criterion from WS7 &middot; B.1 is met, record the max input before clipping ]</span></td></tr>
           <tr><td>Learning</td><td>A calculated gain is not a usable gain: the usable setting depends on the input amplitude and the destination range, not on the amplifier alone.</td></tr>
