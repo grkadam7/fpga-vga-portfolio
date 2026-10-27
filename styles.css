@@ -116,3 +116,24 @@
 @media(max-width:900px){.hero{grid-template-columns:1fr;gap:26px}}
 @media(prefers-reduced-motion:reduce){.spec-bars i{animation:none}}
 @media print{.hero h1 em{background:none;color:#9cc8ff}.hero-spec{print-color-adjust:exact}}
+/* ---- Home: hero kicker, actions, note + metric strip (reference-led) ---- */
+.hero-kicker{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:#7fa3b5;font-weight:700;margin:0 0 16px}
+.hero-tag{font:650 17px/1.35 Georgia,serif;color:#fff;margin:14px 0 4px}
+.hero-actions{display:flex;gap:11px;flex-wrap:wrap;align-items:center;margin-top:22px}
+.hero-btn{display:inline-flex;align-items:center;gap:8px;background:#5eead4;color:#0c2233;font:700 12.5px Inter,"Segoe UI",Arial,sans-serif;padding:11px 20px;border-radius:8px;text-decoration:none;transition:transform .15s,box-shadow .15s}
+.hero-btn:hover{transform:translateY(-1px);box-shadow:0 8px 22px #5eead440}
+.hero-btn.ghost{background:#ffffff0d;color:#cfe0ea;border:1px solid #40607a}
+.hero-btn.ghost:hover{border-color:#7ce0d4;color:#7ce0d4;box-shadow:none}
+.hero-note{display:flex;align-items:center;gap:8px;font-size:11px;color:#8fa8ba;margin:16px 0 0}
+.hero-note:before{content:"";flex:none;width:5px;height:5px;border-radius:50%;background:#f0b429;box-shadow:0 0 0 3px #f0b42926}
+.hero h1{font-size:clamp(36px,4.5vw,58px);font-weight:750}
+.metric-strip{display:grid;grid-template-columns:repeat(4,1fr);background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 6px 20px #15385608;overflow:hidden;margin:0 0 26px}
+.metric-strip div{padding:18px 24px;border-left:1px solid var(--line)}
+.metric-strip div:first-child{border-left:0}
+.metric-strip strong{display:block;font-size:26px;line-height:1.1;letter-spacing:-.02em}
+.metric-strip span{display:block;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:6px}
+.metric-strip div:nth-child(1) strong{color:#2565ac}
+.metric-strip div:nth-child(2) strong{color:#098578}
+.metric-strip div:nth-child(3) strong{color:#7955b5}
+.metric-strip div:nth-child(4) strong{color:#c58d40}
+@media(max-width:700px){.metric-strip{grid-template-columns:repeat(2,1fr)}.metric-strip div:nth-child(3){border-left:0}.metric-strip div:nth-child(n+3){border-top:1px solid var(--line)}}
