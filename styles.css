@@ -57,6 +57,12 @@
 .circuit .gnd{fill:none;stroke:#7d93a6;stroke-width:2.5;stroke-linecap:round}
 .circuit .ct{fill:#8fa3b5;font:700 9.5px Inter,"Segoe UI",Arial,sans-serif;letter-spacing:.12em}
 .circuit .cv{fill:#eef4f9;font:700 16px Georgia,serif}
+.circuit .cv-s{fill:#eef4f9;font:700 11.5px Georgia,serif}
+.circuit .axis{fill:none;stroke:#414e59;stroke-width:1.5;stroke-linecap:round}
+.circuit .curve{fill:none;stroke:#5eead4;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.circuit .cursor{fill:none;stroke:#5eead4;stroke-width:1;stroke-dasharray:2 3;opacity:.6}
+.circuit .dot{fill:#5eead4;stroke:#0f151b;stroke-width:1.5;filter:drop-shadow(0 0 4px rgba(94,234,212,.8))}
+.circuit .ax{fill:#7d93a6;font:700 8px Inter,"Segoe UI",Arial,sans-serif;letter-spacing:.06em}
 .circuit .cs{fill:#7d93a6;font:9.5px Inter,"Segoe UI",Arial,sans-serif}
 .circuit .gt-h{fill:#7d93a6;font:700 8.5px Inter,"Segoe UI",Arial,sans-serif;letter-spacing:.08em}
 .circuit .gt{fill:#c9d6e2;font:600 10.5px Inter,"Segoe UI",Arial,sans-serif}

@@ -101,7 +101,7 @@
     <input type="range" id="load" min="0" max="5" step="0.1" value="2.5">
     <output id="loadVal" for="load">2.5 kg</output>
   </div>
-  <svg class="circuit" viewBox="0 0 1000 470" role="img" aria-label="Live schematic: the load cell feeds the INA126 pre-amp. The pre-amp output goes to the XADC, which tells the FPGA the signal level. The FPGA drives S1 S0 into the CD4052 mux, which selects one of four feedback resistors around the NE5532 VGA, and the VGA output is the circuit output. A gain table shows the rule behind each switch. All values update with the load slider.">
+  <svg class="circuit" viewBox="0 0 1000 470" role="img" aria-label="Live schematic: a plot of the measured load-cell response with a marker at the current load feeds the INA126 pre-amp. The pre-amp output goes to the XADC, which tells the FPGA the signal level. The FPGA drives S1 S0 into the CD4052 mux, which selects one of four feedback resistors around the NE5532 VGA, and the VGA output is the circuit output. A gain table shows the rule behind each switch. All values update with the load slider.">
     <defs>
       <pattern id="cgrid" width="25" height="25" patternUnits="userSpaceOnUse">
         <path d="M25 0H0v25" fill="none" stroke="#ffffff09" stroke-width="1"/>
@@ -175,11 +175,17 @@
     <text class="gt" x="155" y="317">&times;2</text>
     <text class="gt" x="205" y="317">&ge;570 mV</text>
     <!-- load cell -->
+    <!-- load cell: measured response plotted, marker moves with the slider -->
     <rect class="blk" x="20" y="336" width="112" height="80" rx="9"/>
     <rect class="acc" x="38" y="336" width="26" height="3" rx="1.5" fill="#5eead4"/>
-    <text class="ct" x="76" y="362" text-anchor="middle">LOAD CELL</text>
-    <text class="cv" id="t-load" x="76" y="388" text-anchor="middle">2.5 kg</text>
-    <text class="cs" x="76" y="407" text-anchor="middle">0–5 kg bridge</text>
+    <text class="ct" x="32" y="354">LOAD CELL</text>
+    <path class="axis" d="M36 360 V396 H126"/>
+    <text class="ax" x="40" y="370">mV</text>
+    <text class="ax" x="123" y="393" text-anchor="end">kg</text>
+    <polyline class="curve" points="36,395.2 37.8,394.5 45,391.4 54,387.6 63,384.5 72,381.4 81,377.6 90,374.4 99,370.5 108,366.7 117,364.3 126,360"/>
+    <path class="cursor" id="cellCursor" d="M81 377.6 V396"/>
+    <circle class="dot" id="cellDot" cx="81" cy="377.6" r="3.5"/>
+    <text class="cv-s" id="t-load" x="76" y="411" text-anchor="middle">2.5 kg · 2.4 mV</text>
     <!-- INA126 -->
     <rect class="blk" x="168" y="336" width="132" height="80" rx="9"/>
     <rect class="acc" x="186" y="336" width="26" height="3" rx="1.5" fill="#7cb8ff"/>
@@ -351,7 +357,11 @@
     while (pre >= CODES[idx].max) idx++;
     var c = CODES[idx], vout = vin * c.g;
     byId('loadVal').textContent = kg.toFixed(1) + ' kg';
-    byId('t-load').textContent = kg.toFixed(1) + ' kg';
+    byId('t-load').textContent = kg.toFixed(1) + ' kg · ' + sen.toFixed(1) + ' mV';
+    var px = 36 + kg * 18, py = 396 - sen / 4.7 * 36;
+    byId('cellDot').setAttribute('cx', px.toFixed(1));
+    byId('cellDot').setAttribute('cy', py.toFixed(1));
+    byId('cellCursor').setAttribute('d', 'M' + px.toFixed(1) + ' ' + py.toFixed(1) + ' V396');
     byId('t-pre').textContent = Math.round(pre) + ' mV';
     byId('t-xadc').textContent = (pre / 1000).toFixed(2) + ' V';
     byId('t-xadccode').textContent = '12-bit code ' + Math.round(pre / 1000 * 4095);
