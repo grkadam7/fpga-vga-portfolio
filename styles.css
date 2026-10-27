@@ -64,9 +64,12 @@
 .circuit .dot{fill:#5eead4;stroke:#0f151b;stroke-width:1.5;filter:drop-shadow(0 0 4px rgba(94,234,212,.8))}
 .circuit .ax{fill:#7d93a6;font:700 8px Inter,"Segoe UI",Arial,sans-serif;letter-spacing:.06em}
 .circuit .cs{fill:#7d93a6;font:9.5px Inter,"Segoe UI",Arial,sans-serif}
-.circuit .gt-h{fill:#7d93a6;font:700 8.5px Inter,"Segoe UI",Arial,sans-serif;letter-spacing:.08em}
-.circuit .gt{fill:#c9d6e2;font:600 10.5px Inter,"Segoe UI",Arial,sans-serif}
-.circuit .g-row{fill:#35d07f1f;stroke:#35d07f59;stroke-width:1;transition:y .2s}
+.sim table.gain-table{width:auto;border-collapse:collapse;font-size:11px;margin:12px 0 0}
+.sim table.gain-table caption{caption-side:top;text-align:left;font-size:9.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding:0 0 6px}
+.sim table.gain-table th,.sim table.gain-table td{border:1px solid var(--line);padding:4px 12px;text-align:left;white-space:nowrap}
+.sim table.gain-table th{background:#edf4f7;color:#294a5e;font-size:9.5px;letter-spacing:.06em;text-transform:uppercase}
+.sim table.gain-table td{color:#445d70;font-variant-numeric:tabular-nums}
+.sim table.gain-table tbody tr.on td{background:#e6f6ef;border-color:#a4dcc6;color:#0d5f42;font-weight:700}
 .circuit .rl{fill:#c9d6e2;font:700 10px Inter,"Segoe UI",Arial,sans-serif;paint-order:stroke;stroke:#0f151b;stroke-width:3px;stroke-linejoin:round}
 .circuit .sym{fill:#c9d6e2;font:700 16px Inter,"Segoe UI",Arial,sans-serif}
 .circuit .wl{fill:#f0b429;font:700 10px Inter,"Segoe UI",Arial,sans-serif;paint-order:stroke;stroke:#0f151b;stroke-width:3px;stroke-linejoin:round}

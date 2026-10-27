@@ -101,7 +101,7 @@
     <input type="range" id="load" min="0" max="5" step="0.1" value="2.5">
     <output id="loadVal" for="load">2.5 kg</output>
   </div>
-  <svg class="circuit" viewBox="0 0 1000 470" role="img" aria-label="Live schematic: a plot of the measured load-cell response with a marker at the current load feeds the INA126 pre-amp. The pre-amp output goes to the XADC, which tells the FPGA the signal level. The FPGA drives S1 S0 into the CD4052 mux, which selects one of four feedback resistors around the NE5532 VGA, and the VGA output is the circuit output. A gain table shows the rule behind each switch. All values update with the load slider.">
+  <svg class="circuit" viewBox="0 0 1000 470" role="img" aria-label="Live schematic: a plot of the measured load-cell response with a marker at the current load feeds the INA126 pre-amp. The pre-amp output goes to the XADC, which tells the FPGA the signal level. The FPGA drives S1 S0 into the CD4052 mux, which selects one of four feedback resistors around the NE5532 VGA, and the VGA output is the circuit output. All values update with the load slider.">
     <defs>
       <pattern id="cgrid" width="25" height="25" patternUnits="userSpaceOnUse">
         <path d="M25 0H0v25" fill="none" stroke="#ffffff09" stroke-width="1"/>
@@ -118,11 +118,11 @@
     <path class="wire" id="wS0" d="M165 40 V26 H680 V75"/>
     <text class="wl" x="450" y="11">S1</text>
     <text class="wl" x="560" y="40">S0</text>
-    <!-- signal chain: cell -> pre-amp -> (branch to XADC) -> VGA + -->
-    <path class="wire live" d="M132 376 H168"/>
-    <path class="wire live" d="M300 376 H670 V396 H700"/>
-    <path class="wire live" d="M340 376 V238 H400"/>
-    <path class="wire live" d="M467 200 V130 H240"/>
+    <!-- signal chain: load cell -> pre-amp along the bottom, pre-amp -> XADC -> FPGA, pre-amp -> VGA + -->
+    <path class="wire live" d="M86 326 V400 H340"/>
+    <path class="wire live" d="M407 336 V270"/>
+    <path class="wire live" d="M407 190 V130 H260"/>
+    <path class="wire live" d="M475 400 H700"/>
     <!-- feedback bus from the mux legs down to the inverting input -->
     <path class="wire live" d="M580 117 V356 H700"/>
     <!-- four feedback legs I0..I3 (10k, 4.7k, 2.2k, 1k) -->
@@ -143,61 +143,37 @@
     <path class="wire live" d="M830 376 V163 H790"/>
     <path class="wire live" d="M776 376 H878"/>
     <!-- junction dots -->
-    <circle class="j" cx="340" cy="376" r="4.5"/>
     <circle class="j" cx="580" cy="154" r="4.5"/>
     <circle class="j" cx="580" cy="191" r="4.5"/>
     <circle class="j" cx="580" cy="228" r="4.5"/>
     <circle class="j" cx="580" cy="300" r="4.5"/>
     <circle class="j" cx="830" cy="376" r="4.5"/>
-    <!-- gain table: the rule behind each mux switch -->
-    <rect class="blk" x="20" y="180" width="280" height="146" rx="9"/>
-    <rect class="acc" x="38" y="180" width="26" height="3" rx="1.5" fill="#79e8c9"/>
-    <text class="ct" x="36" y="202">GAIN TABLE</text>
-    <text class="gt-h" x="34" y="224">S1 S0</text>
-    <text class="gt-h" x="100" y="224">Rf</text>
-    <text class="gt-h" x="155" y="224">GAIN</text>
-    <text class="gt-h" x="205" y="224">PRE-AMP</text>
-    <rect id="gRow" class="g-row" x="26" y="232" width="268" height="21" rx="5"/>
-    <text class="gt" x="34" y="248">00</text>
-    <text class="gt" x="100" y="248">10 k&Omega;</text>
-    <text class="gt" x="155" y="248">&times;11</text>
-    <text class="gt" x="205" y="248">&lt;180 mV</text>
-    <text class="gt" x="34" y="271">01</text>
-    <text class="gt" x="100" y="271">4.7 k&Omega;</text>
-    <text class="gt" x="155" y="271">&times;5.7</text>
-    <text class="gt" x="205" y="271">&lt;300 mV</text>
-    <text class="gt" x="34" y="294">10</text>
-    <text class="gt" x="100" y="294">2.2 k&Omega;</text>
-    <text class="gt" x="155" y="294">&times;3.2</text>
-    <text class="gt" x="205" y="294">&lt;570 mV</text>
-    <text class="gt" x="34" y="317">11</text>
-    <text class="gt" x="100" y="317">1 k&Omega;</text>
-    <text class="gt" x="155" y="317">&times;2</text>
-    <text class="gt" x="205" y="317">&ge;570 mV</text>
     <!-- load cell -->
-    <!-- load cell: measured response plotted, marker moves with the slider -->
-    <rect class="blk" x="20" y="336" width="112" height="80" rx="9"/>
-    <rect class="acc" x="38" y="336" width="26" height="3" rx="1.5" fill="#5eead4"/>
-    <text class="ct" x="32" y="354">LOAD CELL</text>
-    <path class="axis" d="M36 360 V396 H126"/>
-    <text class="ax" x="40" y="370">mV</text>
-    <text class="ax" x="123" y="393" text-anchor="end">kg</text>
-    <polyline class="curve" points="36,395.2 37.8,394.5 45,391.4 54,387.6 63,384.5 72,381.4 81,377.6 90,374.4 99,370.5 108,366.7 117,364.3 126,360"/>
-    <path class="cursor" id="cellCursor" d="M81 377.6 V396"/>
-    <circle class="dot" id="cellDot" cx="81" cy="377.6" r="3.5"/>
-    <text class="cv-s" id="t-load" x="76" y="411" text-anchor="middle">2.5 kg · 2.4 mV</text>
-    <!-- INA126 -->
-    <rect class="blk" x="168" y="336" width="132" height="80" rx="9"/>
-    <rect class="acc" x="186" y="336" width="26" height="3" rx="1.5" fill="#7cb8ff"/>
-    <text class="ct" x="234" y="362" text-anchor="middle">INA126 PRE-AMP</text>
-    <text class="cv" id="t-pre" x="234" y="388" text-anchor="middle">378 mV</text>
-    <text class="cs" x="234" y="407" text-anchor="middle">gain ≈ ×165</text>
+    <!-- load cell: measured response plotted large, marker moves with the slider -->
+    <rect class="blk" x="20" y="180" width="280" height="146" rx="9"/>
+    <rect class="acc" x="38" y="180" width="26" height="3" rx="1.5" fill="#5eead4"/>
+    <text class="ct" x="36" y="202">LOAD CELL</text>
+    <text class="cv-s" id="t-load" x="284" y="202" text-anchor="end">2.5 kg · 2.4 mV</text>
+    <path class="axis" d="M48 218 V300 H284"/>
+    <text class="ax" x="44" y="222" text-anchor="end">4.7</text>
+    <text class="ax" x="52" y="230">mV</text>
+    <text class="ax" x="44" y="314" text-anchor="end">0</text>
+    <text class="ax" x="284" y="314" text-anchor="end">5 kg</text>
+    <polyline class="curve" points="48,298.3 52.7,296.5 71.6,289.5 95.2,280.8 118.8,273.8 142.4,266.9 166,258.1 189.6,251.2 213.2,242.4 236.8,233.7 260.4,228.4 284,218"/>
+    <path class="cursor" id="cellCursor" d="M166 258.1 V300"/>
+    <circle class="dot" id="cellDot" cx="166" cy="258.1" r="4.5"/>
     <!-- XADC: pre-amp output sampled here, before the FPGA -->
-    <rect class="blk" x="400" y="200" width="135" height="76" rx="9"/>
-    <rect class="acc" x="418" y="200" width="26" height="3" rx="1.5" fill="#5eead4"/>
-    <text class="ct" x="467" y="226" text-anchor="middle">XADC</text>
-    <text class="cv" id="t-xadc" x="467" y="250" text-anchor="middle">0.38 V</text>
-    <text class="cs" id="t-xadccode" x="467" y="268" text-anchor="middle">12-bit code 1546</text>
+    <rect class="blk" x="340" y="190" width="135" height="80" rx="9"/>
+    <rect class="acc" x="358" y="190" width="26" height="3" rx="1.5" fill="#5eead4"/>
+    <text class="ct" x="407" y="216" text-anchor="middle">XADC</text>
+    <text class="cv" id="t-xadc" x="407" y="240" text-anchor="middle">0.38 V</text>
+    <text class="cs" id="t-xadccode" x="407" y="259" text-anchor="middle">12-bit code 1546</text>
+    <!-- INA126 -->
+    <rect class="blk" x="340" y="336" width="135" height="80" rx="9"/>
+    <rect class="acc" x="358" y="336" width="26" height="3" rx="1.5" fill="#7cb8ff"/>
+    <text class="ct" x="407" y="362" text-anchor="middle">INA126 PRE-AMP</text>
+    <text class="cv" id="t-pre" x="407" y="388" text-anchor="middle">378 mV</text>
+    <text class="cs" x="407" y="407" text-anchor="middle">gain ≈ ×165</text>
     <!-- FPGA -->
     <rect class="blk" x="20" y="40" width="240" height="124" rx="9"/>
     <rect class="acc" x="38" y="40" width="26" height="3" rx="1.5" fill="#79e8c9"/>
@@ -229,6 +205,16 @@
     <text class="cs" x="930" y="407" text-anchor="middle">after the VGA</text>
   </svg>
   <p class="sim-caption" id="simCaption">load 2.5 kg · cell 2.4 mV · pre-amp 378 mV · S1 S0 = 10 · Rf 2.2 kΩ · gain ×3.2 · out 1.21 V</p>
+  <table class="gain-table">
+    <caption>Gain table &mdash; the rule the FPGA applies</caption>
+    <thead><tr><th>S1 S0</th><th>R<sub>F</sub></th><th>Gain</th><th>Pre-amp output</th></tr></thead>
+    <tbody>
+      <tr><td>00</td><td>10 k&Omega;</td><td>&times;11</td><td>&lt;180 mV</td></tr>
+      <tr><td>01</td><td>4.7 k&Omega;</td><td>&times;5.7</td><td>&lt;300 mV</td></tr>
+      <tr><td>10</td><td>2.2 k&Omega;</td><td>&times;3.2</td><td>&lt;570 mV</td></tr>
+      <tr><td>11</td><td>1 k&Omega;</td><td>&times;2</td><td>&ge;570 mV</td></tr>
+    </tbody>
+  </table>
   <p class="sim-reason" id="simReason" role="status">&times;5.7 would reach 2.15 V &mdash; past the 2 V maximum, so the FPGA steps down to &times;3.2.</p>
   <p class="sim-note">Curves from our WS1 sensor and pre-amp characterizations; thresholds from the draft gain table. Planned next: hold this output at a steady 2 V.</p>
 </section>
@@ -358,15 +344,16 @@
     var c = CODES[idx], vout = vin * c.g;
     byId('loadVal').textContent = kg.toFixed(1) + ' kg';
     byId('t-load').textContent = kg.toFixed(1) + ' kg · ' + sen.toFixed(1) + ' mV';
-    var px = 36 + kg * 18, py = 396 - sen / 4.7 * 36;
+    var px = 48 + kg * 47.2, py = 300 - sen / 4.7 * 82;
     byId('cellDot').setAttribute('cx', px.toFixed(1));
     byId('cellDot').setAttribute('cy', py.toFixed(1));
-    byId('cellCursor').setAttribute('d', 'M' + px.toFixed(1) + ' ' + py.toFixed(1) + ' V396');
+    byId('cellCursor').setAttribute('d', 'M' + px.toFixed(1) + ' ' + py.toFixed(1) + ' V300');
     byId('t-pre').textContent = Math.round(pre) + ' mV';
     byId('t-xadc').textContent = (pre / 1000).toFixed(2) + ' V';
     byId('t-xadccode').textContent = '12-bit code ' + Math.round(pre / 1000 * 4095);
     byId('t-code').textContent = 'S1 S0 = ' + c.s;
-    byId('gRow').setAttribute('y', 232 + idx * 23);
+    var rows = document.querySelectorAll('.gain-table tbody tr');
+    for (var k = 0; k < rows.length; k++) rows[k].classList.toggle('on', k === idx);
     byId('t-out').textContent = vout.toFixed(2) + ' V';
     var b1 = c.s.charAt(0) === '1', b0 = c.s.charAt(1) === '1';
     byId('ledS1').classList.toggle('on', b1);
