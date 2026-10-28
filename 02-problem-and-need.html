@@ -79,9 +79,10 @@
         <tr><td>Signal bandwidth</td><td>DC or slowly varying</td><td>Hz</td><td>Application &mdash; conveyor-belt weight measurement</td></tr>
         <tr><td>Supplies</td><td>&plusmn;12, 5 and 3.3</td><td>V</td><td>Board rails &mdash; verified at TP5 before powering the ICs</td></tr>
         <tr><td>Load on output</td><td><span class="pending">[ TO MEASURE &mdash; R_load and C_load at TP3 ]</span></td><td>&mdash;</td><td>&mdash;</td></tr>
-        <tr><td>Source impedance</td><td><span class="pending">[ TO MEASURE &mdash; bridge resistance across the load-cell leads at TP1 ]</span></td><td>&Omega;</td><td>&mdash;</td></tr>
+        <tr><td>Source impedance</td><td>1</td><td>k&Omega;</td><td>Measured &mdash; DMM across the green/white signal leads; the same 1 k&Omega; across red/black confirms a 1 k&Omega; bridge</td></tr>
       </tbody>
     </table>
+    <p class="table-note">A 1 k&Omega; source is low enough that the INA126's high input impedance makes loading negligible; the cell and pre-amp offset (48.7 mV at no load) is the larger error term.</p>
   </section>
 
   <section class="content-card">
