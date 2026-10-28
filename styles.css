@@ -52,6 +52,12 @@
 .circuit .wire.ctrl{stroke:#f0b429;filter:drop-shadow(0 0 4px rgba(240,180,41,.5))}
 .circuit .j{fill:#35d07f}
 .circuit .blk{fill:url(#cblk);stroke:#34434f;stroke-width:1.5}
+.circuit .cmp.on{stroke:#5eead4;fill:#123039;filter:drop-shadow(0 0 4px rgba(94,234,212,.5))}
+.circuit .cmp-out{fill:none;stroke:#4d5f6d;stroke-width:2;stroke-linecap:round;transition:stroke .2s}
+.circuit .cmp-out.on{stroke:#5eead4}
+.circuit .cmp-lab{fill:#a9bdcb;font:700 9px Inter,"Segoe UI",Arial,sans-serif}
+.circuit .enc{fill:#a9bdcb;font:700 10px Inter,"Segoe UI",Arial,sans-serif}
+.circuit .enc-sub{fill:#8ea3b5;font:600 8px Inter,"Segoe UI",Arial,sans-serif;letter-spacing:.08em}
 .circuit .cmp{fill:url(#cblk);stroke:#93a7b8;stroke-width:2}
 .circuit .acc{opacity:.85}
 .circuit .gnd{fill:none;stroke:#7d93a6;stroke-width:2.5;stroke-linecap:round}
