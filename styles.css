@@ -147,6 +147,9 @@
 /* ---- Page 01: design-record bar + roster tables ---- */
 .record-bar{display:flex;align-items:center;gap:10px;background:#f5f1fb;border:1px solid #e4dbf3;border-left:4px solid #7c5cc4;border-radius:6px;padding:9px 16px;margin:0 0 16px;font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:#4a3b6b;font-weight:700}
 .record-bar .pill{letter-spacing:0;text-transform:none;font-weight:600;font-size:11px;background:#fff;border:1px solid #d8cdea;border-radius:999px;padding:1px 10px;color:#5d4a86}
+.content-card h2 .pill{display:inline-block;vertical-align:middle;margin-left:6px;font:700 9.5px Inter,"Segoe UI",Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;background:#eef4f7;border:1px solid #d5e2e9;border-radius:999px;padding:3px 9px;color:#3c6175}
+.content-card h2 .pill.open{background:#fff4e2;border-color:#eccd97;color:#8a5a12}
+.content-card h2 .pill.fixed{background:#e6f6f2;border-color:#bfe6dd;color:#0b6b5f}
 .legacy-content .card-sub{font-size:13px;color:var(--muted);margin:0 0 12px}
 .legacy-content table.roster td:first-child{font-weight:600;color:#263f52}
 .legacy-content .table-note{font-size:12px;color:var(--muted);margin:8px 0 0}
