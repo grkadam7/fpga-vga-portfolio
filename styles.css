@@ -178,3 +178,8 @@
 .hero.hero-solo{grid-template-columns:minmax(0,1fr)}
 .hero.hero-solo h1{font-size:clamp(34px,4vw,54px);max-width:820px}
 .hero.hero-solo .subtitle{max-width:70ch}
+/* ---- Page 03: comparison marks, chosen badge, card sub-headings ---- */
+.legacy-content table .yes{color:#0a7d6f;font-weight:700}
+.legacy-content table .no{color:#b4442e;font-weight:700}
+.legacy-content .pill.chosen{background:#e6f6f2;border-color:#bfe6dd;color:#0b6b5f}
+.legacy-content .content-card h3{margin:18px 0 6px;font-size:15px}
