@@ -187,3 +187,4 @@
 .record-bar ~ .content-card table tbody td.col-chosen{background:#e4f6f0;box-shadow:inset 1px 0 #a9dbcf,inset -1px 0 #a9dbcf}
 .record-bar ~ .content-card table tbody tr:nth-child(even) td.col-chosen{background:#e4f6f0}
 .record-bar ~ .content-card table tbody tr:last-child td.col-chosen{box-shadow:inset 1px 0 #a9dbcf,inset -1px 0 #a9dbcf,inset 0 -1px #a9dbcf}
+.legacy-content table .empty-row{color:var(--muted);font-style:italic;text-align:center;padding:18px 13px}
