@@ -136,7 +136,7 @@
 .metric-strip div:nth-child(2) strong{color:#098578}
 .metric-strip div:nth-child(3) strong{color:#7955b5}
 .metric-strip div:nth-child(4) strong{color:#c58d40}
-@media(max-width:700px){.metric-strip{grid-template-columns:repeat(2,1fr)}.metric-strip div:nth-child(3){border-left:0}.metric-strip div:nth-child(n+3){border-top:1px solid var(--line)}}
+@media(max-width:700px){.legacy-content table{display:block;width:max-content;max-width:100%;overflow-x:auto}.metric-strip{grid-template-columns:repeat(2,1fr)}.metric-strip div:nth-child(3){border-left:0}.metric-strip div:nth-child(n+3){border-top:1px solid var(--line)}}
 
 /* ---- Sidebar nav: icons instead of numbers ---- */
 .nav-ico{width:18px;height:18px;flex:none;display:grid;place-items:center;color:#7f9dae}
