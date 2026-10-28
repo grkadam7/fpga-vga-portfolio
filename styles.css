@@ -137,3 +137,18 @@
 .metric-strip div:nth-child(3) strong{color:#7955b5}
 .metric-strip div:nth-child(4) strong{color:#c58d40}
 @media(max-width:700px){.metric-strip{grid-template-columns:repeat(2,1fr)}.metric-strip div:nth-child(3){border-left:0}.metric-strip div:nth-child(n+3){border-top:1px solid var(--line)}}
+
+/* ---- Sidebar nav: icons instead of numbers ---- */
+.nav-ico{width:18px;height:18px;flex:none;display:grid;place-items:center;color:#7f9dae}
+.nav-ico svg{width:16px;height:16px;display:block}
+.nav-link[aria-current=page] .nav-ico{color:#8ce0da}
+.nav-link[aria-current=page]:after{content:"\203A";margin-left:auto;color:#8ce0da;font-size:15px;font-weight:700}
+
+/* ---- Page 01: design-record bar + roster tables ---- */
+.record-bar{display:flex;align-items:center;gap:10px;background:#f5f1fb;border:1px solid #e4dbf3;border-left:4px solid #7c5cc4;border-radius:6px;padding:9px 16px;margin:0 0 16px;font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:#4a3b6b;font-weight:700}
+.record-bar .pill{letter-spacing:0;text-transform:none;font-weight:600;font-size:11px;background:#fff;border:1px solid #d8cdea;border-radius:999px;padding:1px 10px;color:#5d4a86}
+.legacy-content .card-sub{font-size:13px;color:var(--muted);margin:0 0 12px}
+.legacy-content table.roster td:first-child{font-weight:600;color:#263f52}
+.legacy-content .table-note{font-size:12px;color:var(--muted);margin:8px 0 0}
+.legacy-content .rhythm{margin:10px 0 0;padding-left:20px}
+.legacy-content .rhythm li{margin:0 0 6px}
