@@ -163,3 +163,14 @@
 .need-sub{font-size:13.5px;color:var(--muted);margin:0 0 20px;max-width:76ch}
 /* Long page titles sit in the narrow right hero column — keep them inside it (clipped by overflow:hidden otherwise) */
 @media(min-width:561px){.hero:not(:has(.hero-spec)) h1{font-size:clamp(34px,3.6vw,46px)}}
+/* ---- Pages 01/02: metric strip, statement card, roster avatars ---- */
+.statement-card{background:radial-gradient(at 85% 10%,#1d5a6e 0,transparent 55%),linear-gradient(120deg,#122c48,#0d1f33);border-radius:12px;padding:26px 30px;margin:0 0 18px;box-shadow:0 8px 24px #163b6118}
+.statement-card .label{font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:#8ee6dc;font-weight:700;margin:0 0 10px}
+.statement-card p.body{margin:0;font:600 17px/1.7 Inter,"Segoe UI",Arial,sans-serif;color:#e8f1f6;max-width:78ch}
+.statement-card p.app{font-size:13px;line-height:1.65;color:#b6c8d6;margin:12px 0 0;max-width:78ch}
+.legacy-content .meta{margin:0 0 14px}
+.avatar{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;font:700 11px Inter,"Segoe UI",Arial,sans-serif;color:#fff;margin-right:9px;vertical-align:middle;letter-spacing:0}
+.legacy-content table.roster tbody tr:nth-child(1) .avatar{background:#2565ac}
+.legacy-content table.roster tbody tr:nth-child(2) .avatar{background:#098578}
+.legacy-content table.roster tbody tr:nth-child(3) .avatar{background:#7955b5}
+.legacy-content table.roster tbody tr:nth-child(4) .avatar{background:#c58d40}
