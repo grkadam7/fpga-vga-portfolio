@@ -72,16 +72,34 @@
       <thead><tr><th>Input</th><th>Value</th><th>Units / range</th><th>Source</th></tr></thead>
       <tbody>
         <tr><td>Load range</td><td>0 to 5</td><td>kg</td><td>Datasheet &mdash; 5 kg 4-wire strain-gauge load cell</td></tr>
-        <tr><td>Sensor output</td><td>0 to 5</td><td>mV</td><td>Datasheet / measured during load-cell characterisation</td></tr>
-        <tr><td>Pre-amplifier output (INA126)</td><td>&asymp;48 to &asymp;760</td><td>mV</td><td>Calculated from the pre-amp gain &mdash; <span class="pending">[ PENDING: gain calculation card on page 6 ]</span></td></tr>
+        <tr><td>Sensor output</td><td>0.1 to 4.7</td><td>mV</td><td>Measured &mdash; 12-point load-cell sweep, TP1</td></tr>
+        <tr><td>Pre-amplifier output (INA126)</td><td>48.7 to 760</td><td>mV</td><td>Measured at TP2 &mdash; INA126 at G = 150 (R<sub>G</sub> = 470 &Omega;)</td></tr>
         <tr><td>Target output swing</td><td>1</td><td>V</td><td>Design target &mdash; Nexys A7 XADC input, 0&ndash;1 V</td></tr>
         <tr><td>ADC</td><td>12, 0&ndash;1</td><td>bit, V</td><td>Datasheet &mdash; Artix-7 XADC user guide</td></tr>
         <tr><td>Signal bandwidth</td><td>DC or slowly varying</td><td>Hz</td><td>Application &mdash; conveyor-belt weight measurement</td></tr>
-        <tr><td>Supplies</td><td>5 and 3.3</td><td>V</td><td>Assumed &mdash; bench supply and Nexys A7 rail</td></tr>
-        <tr><td>Load on output</td><td><span class="pending">[ PENDING &mdash; state R_load and C_load ]</span></td><td>&mdash;</td><td>&mdash;</td></tr>
-        <tr><td>Source impedance</td><td><span class="pending">[ PENDING &mdash; WS1 &middot; B.3, cite the source ]</span></td><td>&Omega;</td><td>&mdash;</td></tr>
+        <tr><td>Supplies</td><td>&plusmn;12, 5 and 3.3</td><td>V</td><td>Board rails &mdash; verified at TP5 before powering the ICs</td></tr>
+        <tr><td>Load on output</td><td><span class="pending">[ TO MEASURE &mdash; R_load and C_load at TP3 ]</span></td><td>&mdash;</td><td>&mdash;</td></tr>
+        <tr><td>Source impedance</td><td><span class="pending">[ TO MEASURE &mdash; bridge resistance across the load-cell leads at TP1 ]</span></td><td>&Omega;</td><td>&mdash;</td></tr>
       </tbody>
     </table>
+  </section>
+
+  <section class="content-card">
+    <h2>Measured input characteristic</h2>
+    <p class="card-sub">Selected points from the 12-point load-cell sweep, recorded through TP1 and TP2.</p>
+    <table>
+      <thead><tr><th>Load (kg)</th><th>Load-cell output (mV)</th><th>INA126 output (mV)</th></tr></thead>
+      <tbody>
+        <tr><td>0.0</td><td>0.1</td><td>48.7</td></tr>
+        <tr><td>0.5</td><td>0.6</td><td>73</td></tr>
+        <tr><td>1.0</td><td>1.1</td><td>147</td></tr>
+        <tr><td>2.0</td><td>1.9</td><td>303</td></tr>
+        <tr><td>3.0</td><td>2.8</td><td>452</td></tr>
+        <tr><td>4.0</td><td>3.8</td><td>606</td></tr>
+        <tr><td>5.0</td><td>4.7</td><td>760</td></tr>
+      </tbody>
+    </table>
+    <p class="table-note">The sensor response is monotonic and near-linear at &asymp;0.92 mV/kg. The 48.7 mV at zero load is amplifier and sensor offset, not weight, so it must be removed before gain is chosen. The measured span (711.3 mV over 4.6 mV) is consistent with the designed pre-amp gain of 150.</p>
   </section>
 
   <section class="content-card">
@@ -89,13 +107,14 @@
     <table>
       <thead><tr><th>Source</th><th>What we learned from it</th></tr></thead>
       <tbody>
-        <tr><td>Artix-7 XADC user guide</td><td>On-chip 12-bit ADC, input range 0&ndash;1 V, suitable for sensor signal acquisition.</td></tr>
-        <tr><td>CD4052 datasheet</td><td>Dual 4-channel analog multiplexer; selection of multiple feedback resistors to obtain different gain levels, controlled by digital select lines.</td></tr>
-        <tr><td>INA126 datasheet</td><td>High input impedance, high CMRR &mdash; suited to bridge sensors such as load cells.</td></tr>
-        <tr><td>Op-amp application notes</td><td>An op-amp VGA with switched feedback resistors is simple, reliable and widely used for sensor signal conditioning.</td></tr>
+        <tr><td><a href="https://digilent.com/reference/programmable-logic/nexys-a7/reference-manual" target="_blank" rel="noopener">Nexys A7 reference manual &mdash; Artix-7 XADC</a></td><td>On-chip 12-bit ADC, input range 0&ndash;1 V, suitable for sensor signal acquisition.</td></tr>
+        <tr><td><a href="https://www.alldatasheet.com/datasheet-pdf/view/50866/FAIRCHILD/CD4052.html" target="_blank" rel="noopener">CD4052 datasheet</a></td><td>Dual 4-channel analog multiplexer; selection of multiple feedback resistors to obtain different gain levels, controlled by digital select lines.</td></tr>
+        <tr><td><a href="https://www.alldatasheet.com/datasheet-pdf/view/56682/BURR-BROWN/INA126.html" target="_blank" rel="noopener">INA126 datasheet</a></td><td>High input impedance, high CMRR &mdash; suited to bridge sensors such as load cells. Gain is set by a single external resistor, R<sub>G</sub>.</td></tr>
+        <tr><td><a href="https://www.ti.com/lit/ds/symlink/ne5532.pdf" target="_blank" rel="noopener">NE5532 datasheet</a></td><td>Low-noise dual op-amp &mdash; the gain stage device chosen after the candidate comparison below.</td></tr>
+        <tr><td><a href="https://cdn.robotshop.com/media/p/phi/rb-phi-118/pdf/datasheet-3133.pdf" target="_blank" rel="noopener">5 kg load-cell datasheet</a></td><td>4-wire strain-gauge bridge; output is ratiometric to the applied load, so it needs a stable excitation supply.</td></tr>
+        <tr><td>Candidate op-amp comparison (WS3 &middot; B.2)</td><td>NE5532 chosen over LM741, LM358 and TL081: 10 MHz GBW, 9 V/&micro;s slew rate, 5 nV/&radic;Hz noise and 100 dB CMRR, at low cost and 8-pin availability. The others give either too little bandwidth (LM741, LM358) or more noise and offset (TL081).</td></tr>
       </tbody>
     </table>
-    <p class="table-note"><span class="pending">[ PENDING &mdash; add datasheet / application-note links with one line of learning each, per WS1 &middot; Section A ]</span></p>
   </section>
 
   <section class="content-card">
@@ -112,15 +131,18 @@
   </section>
 
   <section class="content-card">
-    <h2>Design unknowns carried forward to Worksheet 2</h2>
-    <ul class="rhythm">
-      <li>Exact minimum/maximum input amplitude at the VGA input once the pre-amp gain is fixed.</li>
-      <li>Number and spacing of gain steps needed to cover the input range without gaps.</li>
-      <li>Number of control bits, logic level and interface type for the FPGA &rarr; switch path.</li>
-      <li><span class="pending">[ PENDING &mdash; WS1 &middot; Section C, "what is still uncertain" answer ]</span></li>
-    </ul>
+    <h2>Design unknowns, closed</h2>
+    <p class="card-sub">Each question carried out of Worksheet 1 is now answered.</p>
+    <table>
+      <thead><tr><th>Unknown</th><th>Answer</th></tr></thead>
+      <tbody>
+        <tr><td>Input amplitude at the VGA once pre-amp gain is fixed</td><td>48.7 mV at no load to 760 mV at 5 kg, measured at the INA126 output.</td></tr>
+        <tr><td>Number and spacing of gain steps</td><td>Four steps with no gaps: 0&ndash;180, 180&ndash;300, 300&ndash;570 and 570&ndash;760 mV.</td></tr>
+        <tr><td>Control bits, logic level and interface</td><td>Two bits, 3.3 V CMOS, parallel &mdash; mux_select[0:1] on C17 and D18 drive CD4052 S<sub>0</sub> and S<sub>1</sub>.</td></tr>
+      </tbody>
+    </table>
   </section>
 
-  <p class="evidence">Supporting evidence &mdash; load-cell characterisation data and photos to be linked here. <span class="pending">[ PENDING ]</span></p>
+  <p class="evidence">Characterisation data recorded on the bench; the raw sweep and the plotted response are held in the project files. <a href="15-project-files.html">See project files</a>.</p>
 </div>
 <nav class="page-nav" aria-label="Page navigation"><a href="01-team-and-roles.html">← Previous</a><a href="03-concept-choices.html">Next: Concept Choices →</a></nav><footer class="site-footer">KLE Technological University · Electronics and Communication Engineering<br>FPGA-Controlled Variable Gain Amplifier · Team 01 · Academic Year 2026–27</footer></main></div><script src="site.js" defer></script></body></html>
