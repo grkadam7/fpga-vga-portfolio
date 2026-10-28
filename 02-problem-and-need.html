@@ -72,14 +72,14 @@
       <thead><tr><th>Input</th><th>Value</th><th>Units / range</th><th>Source</th></tr></thead>
       <tbody>
         <tr><td>Load range</td><td>0 to 5</td><td>kg</td><td>Datasheet &mdash; 5 kg 4-wire strain-gauge load cell</td></tr>
-        <tr><td>Sensor output</td><td>0.1 to 4.7</td><td>mV</td><td>Measured &mdash; 12-point load-cell sweep, TP1</td></tr>
-        <tr><td>Pre-amplifier output (INA126)</td><td>48.7 to 760</td><td>mV</td><td>Measured at TP2 &mdash; INA126 at G = 150 (R<sub>G</sub> = 470 &Omega;)</td></tr>
+        <tr><td>Sensor output</td><td>0.1 to 4.7</td><td>mV</td><td>Measured 0.1&ndash;4.7 mV over a 12-point sweep at TP1; datasheet rated 1.0 &plusmn;0.15 mV/V at 5 V excitation</td></tr>
+        <tr><td>Pre-amplifier output (INA126)</td><td>48.7 to 760</td><td>mV</td><td>Measured at TP2; INA126 set for the designed pre-amp gain of 150 &mdash; G = 5 + 80 k&Omega;/R<sub>G</sub></td></tr>
         <tr><td>Target output swing</td><td>1</td><td>V</td><td>Design target &mdash; Nexys A7 XADC input, 0&ndash;1 V</td></tr>
         <tr><td>ADC</td><td>12, 0&ndash;1</td><td>bit, V</td><td>Datasheet &mdash; Artix-7 XADC user guide</td></tr>
         <tr><td>Signal bandwidth</td><td>DC or slowly varying</td><td>Hz</td><td>Application &mdash; conveyor-belt weight measurement</td></tr>
         <tr><td>Supplies</td><td>&plusmn;12, 5 and 3.3</td><td>V</td><td>Board rails &mdash; verified at TP5 before powering the ICs</td></tr>
-        <tr><td>Load on output</td><td><span class="pending">[ TO MEASURE &mdash; R_load and C_load at TP3 ]</span></td><td>&mdash;</td><td>&mdash;</td></tr>
-        <tr><td>Source impedance</td><td>1</td><td>k&Omega;</td><td>Measured &mdash; DMM across the green/white signal leads; the same 1 k&Omega; across red/black confirms a 1 k&Omega; bridge</td></tr>
+        <tr><td>Load on output</td><td>XADC input (A13), after the 16 Hz low-pass filter</td><td>&mdash;</td><td><span class="pending">[ TO MEASURE &mdash; R_load and C_load at TP3 ]</span></td></tr>
+        <tr><td>Source impedance</td><td>1</td><td>k&Omega;</td><td>Measured 1 k&Omega; with a DMM across green/white (same across red/black); datasheet output impedance 1000 &plusmn;10 &Omega;, input 1130 &plusmn;10 &Omega;</td></tr>
       </tbody>
     </table>
     <p class="table-note">A 1 k&Omega; source is low enough that the INA126's high input impedance makes loading negligible; the cell and pre-amp offset (48.7 mV at no load) is the larger error term.</p>
@@ -110,10 +110,10 @@
       <tbody>
         <tr><td><a href="https://digilent.com/reference/programmable-logic/nexys-a7/reference-manual" target="_blank" rel="noopener">Nexys A7 reference manual &mdash; Artix-7 XADC</a></td><td>On-chip 12-bit ADC, input range 0&ndash;1 V, suitable for sensor signal acquisition.</td></tr>
         <tr><td><a href="https://www.alldatasheet.com/datasheet-pdf/view/50866/FAIRCHILD/CD4052.html" target="_blank" rel="noopener">CD4052 datasheet</a></td><td>Dual 4-channel analog multiplexer; selection of multiple feedback resistors to obtain different gain levels, controlled by digital select lines.</td></tr>
-        <tr><td><a href="https://www.alldatasheet.com/datasheet-pdf/view/56682/BURR-BROWN/INA126.html" target="_blank" rel="noopener">INA126 datasheet</a></td><td>High input impedance, high CMRR &mdash; suited to bridge sensors such as load cells. Gain is set by a single external resistor, R<sub>G</sub>.</td></tr>
-        <tr><td><a href="https://www.ti.com/lit/ds/symlink/ne5532.pdf" target="_blank" rel="noopener">NE5532 datasheet</a></td><td>Low-noise dual op-amp &mdash; the gain stage device chosen after the candidate comparison below.</td></tr>
-        <tr><td><a href="https://cdn.robotshop.com/media/p/phi/rb-phi-118/pdf/datasheet-3133.pdf" target="_blank" rel="noopener">5 kg load-cell datasheet</a></td><td>4-wire strain-gauge bridge; output is ratiometric to the applied load, so it needs a stable excitation supply.</td></tr>
-        <tr><td>Candidate op-amp comparison (WS3 &middot; B.2)</td><td>NE5532 chosen over LM741, LM358 and TL081: 10 MHz GBW, 9 V/&micro;s slew rate, 5 nV/&radic;Hz noise and 100 dB CMRR, at low cost and 8-pin availability. The others give either too little bandwidth (LM741, LM358) or more noise and offset (TL081).</td></tr>
+        <tr><td><a href="datasheets/INA126.pdf" target="_blank" rel="noopener">INA126 datasheet</a></td><td>High input impedance, high CMRR &mdash; suited to bridge sensors such as load cells. Gain is set by a single external resistor, R<sub>G</sub>.</td></tr>
+        <tr><td><a href="datasheets/NE5532.pdf" target="_blank" rel="noopener">NE5532 datasheet</a></td><td>Low-noise dual op-amp &mdash; the gain stage device chosen after the candidate comparison below.</td></tr>
+        <tr><td><a href="datasheets/3133-loadcell-5kg.pdf" target="_blank" rel="noopener">3133 CZL635 5 kg load-cell datasheet</a></td><td>4-wire strain-gauge bridge, 1.0 &plusmn;0.15 mV/V at 5 V excitation &mdash; about 5 mV full scale &mdash; with 0.05 % FS precision. Output is ratiometric to the load, so it needs a stable excitation supply.</td></tr>
+        <tr><td>Candidate op-amp comparison (WS3 &middot; B.2)</td><td>NE5532 chosen over LM741, LM358 and TL081: far more bandwidth than a DC-to-16 Hz signal needs, 5 nV/&radic;Hz typical input noise and 100 dB CMRR, at low cost in an 8-pin package. LM741 and LM358 are too slow; TL081 has higher noise and offset.</td></tr>
       </tbody>
     </table>
   </section>
