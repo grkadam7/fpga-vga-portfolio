@@ -174,3 +174,7 @@
 .legacy-content table.roster tbody tr:nth-child(2) .avatar{background:#098578}
 .legacy-content table.roster tbody tr:nth-child(3) .avatar{background:#7955b5}
 .legacy-content table.roster tbody tr:nth-child(4) .avatar{background:#c58d40}
+/* Pages 01/02 carry no status panel: one full-width text column, no empty right cell */
+.hero.hero-solo{grid-template-columns:minmax(0,1fr)}
+.hero.hero-solo h1{font-size:clamp(34px,4vw,54px);max-width:820px}
+.hero.hero-solo .subtitle{max-width:70ch}
